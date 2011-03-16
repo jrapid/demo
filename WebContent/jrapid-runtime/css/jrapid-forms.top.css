@@ -1,0 +1,73 @@
+
+
+/* ------------------- form ------------------- */
+
+div.jrapid_form > label {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+    width:40em;
+    }
+
+label {
+    display: block;
+    margin-bottom:4px;
+    }
+
+label.jrapid_sub  { font-weight: normal; font-size: 11px; margin: 0px 0 10px 0; }
+/*
+label {  font-size: 12px; font-weight: bold; float: left; padding-right: 4px; width: 100px; text-align: right; display: block; height: 25px; padding-top: 4px; vertical-align: middle;  }
+label.jrapid_sub  { font-weight: normal; font-size: 11px; margin: 0px 0px 0px 0px; }
+*/
+input, select { font-size: 12px; padding: 2px; }
+textarea { font-size: 12px; }
+
+
+/* ------------------- form layout ------------------- */
+
+div.jrapid_column {
+    float: left;
+    padding-left:15px;
+    }
+.jrapid_subcolumn {
+    clear:both;
+    overflow:hidden;
+   }
+.jrapid_row {
+    float: left;
+    }
+.jrapid_row div  {
+    float: left;
+    margin-right:0px;
+    }
+
+.jrapid_property  {
+    margin-bottom:10px;
+    }
+
+div.jrapid_row > div.jrapid_subrow,
+div.jrapid_row > div.jrapid_property  {
+    margin-right:10px;
+    }
+
+div.jrapid_subrow div.jrapid_property  {
+    margin-right:5px;
+    }
+
+div.jrapid_subrow * div.jrapid_property  {
+    margin-right:0px;
+    border:0px;
+    }
+    
+
+
+div.jrapid_form > div.jrapid_property,
+div.jrapid_column > div.jrapid_property,
+div.jrapid_subcolumn > div.jrapid_property {
+    clear:both;
+   /* overflow:hidden;*/
+   }
+
+.buttonbar { clear: both; margin-top:20px;}
+

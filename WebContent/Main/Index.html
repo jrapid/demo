@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN " " http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xalan="http://xml.apache.org/xalan" xmlns:java="http://xml.apache.org/xalan/java" xmlns:jrapid="http://www.jrapid.com/tld" xmlns:str="http://exslt.org/strings">
+    <head>
+        <title>Human Resources Manager</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+        <script type="text/javascript" src="../jrapid-runtime/jrapid-tags.js?v=1.0nb50">/**/</script>
+        <script type="text/javascript" src="../jrapid-runtime/jrapid-runtime.js?v=1.0nb50">/**/</script>
+        <script type="text/javascript" src="../jrapid-runtime/jrapid-bi.js?v=1.0nb50">/**/</script>
+        <script type="text/javascript">
+					jrapid.experience(
+						'../jrapid-runtime', 
+						'flash', 
+						'web-horizontal', 
+						'', 
+						'default'
+					);
+				</script>
+        <script type="text/javascript">isPanel = true;</script>
+        <script type="text/javascript" src="../jrapid-runtime/jquery-1.4.2.min.js">/**/</script>
+        <script type="text/javascript" src="../jrapid-runtime/jquery-ui-1.8rc2.custom.min.js">/**/</script>
+        <link href="../jrapid-runtime/css/ui-lightness/jquery-ui-1.8rc2.custom.css" type="text/css" rel="stylesheet"/>
+        <link href="../Main/css/Main.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="header">
+                <div class="header_inner"><h1>Welcome to Human Resources Manager</h1><h2>This application manages a HR area, storing employees (formerly candidates), courses taken and vacation requests.</h2></div>
+            </div>
+            <div class="container">
+                <div class="menucontainer">
+                    <ul class="menubar"> <!-- menu Configuration--> 
+                        <li class="menubaritem">
+                            <a href="#">
+                                <b>Configuration</b>
+                            </a>
+                            <ul class="menu">
+                                <li class="menuitem">
+                                    <a onclick="jrapid.listing({entity: 'Country', label: 'Country', module: 'Main', subset: '' });" href="#">
+                                        <b>Country</b>
+                                    </a>
+                                </li>
+                                <li class="menuitem">
+                                    <a onclick="jrapid.listing({entity: 'State', label: 'State', module: 'Main', subset: '' });" href="#">
+                                        <b>State</b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> <!-- menu Employees Album--> 
+                        <li class="menubaritem">
+                            <a href="#">
+                                <b>Employees Album</b>
+                            </a>
+                            <ul class="menu">
+                                <li class="menuitem">
+                                    <a onclick="jrapid.listing({entity: 'Employee', label: 'Employee', module: 'Main', subset: 'employees' , listing: 'employeesAlbum'});" href="#">
+                                        <b>Employee</b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> <!-- menu Interviews--> 
+                        <li class="menubaritem">
+                            <a href="#">
+                                <b>Interviews</b>
+                            </a>
+                            <ul class="menu">
+                                <li class="menuitem">
+                                    <a onclick="jrapid.listing({entity: 'Interview', label: 'Interview', module: 'Main', subset: '' });" href="#">
+                                        <b>Interview</b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> <!-- menu Learning--> 
+                        <li class="menubaritem">
+                            <a href="#">
+                                <b>Learning</b>
+                            </a>
+                            <ul class="menu">
+                                <li class="menuitem">
+                                    <a onclick="jrapid.listing({entity: 'Qualification', label: 'Qualification', module: 'Main', subset: '' });" href="#">
+                                        <b>Qualification</b>
+                                    </a>
+                                </li>
+                                <li class="menuitem">
+                                    <a onclick="jrapid.listing({entity: 'Course', label: 'Course', module: 'Main', subset: '' });" href="#">
+                                        <b>Course</b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> <!-- menu Vacations--> 
+                        <li class="menubaritem">
+                            <a href="#">
+                                <b>Vacations</b>
+                            </a>
+                            <ul class="menu">
+                                <li class="menuitem">
+                                    <a onclick="jrapid.listing({entity: 'VacationRequest', label: 'Vacation Request', module: 'Main', subset: '' });" href="#">
+                                        <b>Vacation Request</b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menubaritem">
+                            <a href="#">
+                                <b>Reports</b>
+                            </a>
+                            <ul class="menu">
+                                <li class="menuitem">
+                                    <a onclick="jrapid.crosstab( { entity: 'Employee', module: 'Main', target: 'window' } );" href="#">
+                                        <b>Employee</b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> <!-- panel --> 
+                <div id="panel">
+        
+        
+        <div style="float: left; width: 100%;">
+            <div class="jrapid_accordeon">
+                <div class="jrapid_accordeonitem ">
+                                <button class="jrapid_accordeonitem_button" onmousedown="application.showAccordeon(this); jrapid.accordeonOnClickResize();">Employees</button>
+                                <div class="jrapid_accordeonitem_body jrapid_accordeonitem_body_hidden">
+                    <div id="employees" panelheight="75%" listing="listing">
+                                        <script type="text/javascript">
+				jrapid.panelLoader.addTrigger(
+					function() { 
+						jrapid.listing({
+							entity: 'Employee', 
+							canvas: 'employees', 
+							module: 'Main', 
+							target: 'replace'
+							,listing: 'employeesLeft'
+						});
+					}
+				);
+			</script>
+                                    </div>
+                </div>
+                            </div>
+            </div>
+        </div>
+        
+    </div>
+                <br class="clearfix"/>
+            </div>
+            <div class="footer">
+                <div class="footer_inner"><h4>This application is entirely built with JRapid</h4>Visit us at <a href="http://www.jrapid.com">www.jrapid.com</a></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+
+/* ----------------------------------------------------------------------------- */
+/* form generic */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	input, select { font-size: 11px; padding: 2px; }
+	textarea { font-size: 11px; }
+	select.jrapid_select { height: auto; }
+
+/* label */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.jrapid_form > label {  display: block; font-weight: bold;  font-size: 12px; margin-top: 10px; padding-right: 15px; }
+	div.jrapid_property label.jrapid {  display: block; float: left; margin-bottom: 4px; padding-right: 1.3em; text-align: right; width: 10em; }
+	label.jrapid_sub { font-weight: normal; font-size: 11px; margin: 0px 0 10px 0; width: auto; text-align: left; }
+	
+	label.jrapidtop { display: block; margin-bottom:4px;}
+	/*
+	label {  font-size: 12px; font-weight: bold; float: left; padding-right: 4px; width: 100px; text-align: right; display: block; height: 25px; padding-top: 4px; vertical-align: middle;  }
+	label.jrapid_sub  { font-weight: normal; font-size: 11px; margin: 0px 0px 0px 0px; }
+	*/
+
+ 
+/* ----------------------------------------------------------------------------- */
+/* form layout */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.jrapid_column { float: left; margin-right:10px; }
+	div.jrapid_subcolumn { clear: both; overflow: hidden; }
+	
+	div.jrapid_row { float: left; clear:left; }
+	div.jrapid_row div.jrapid_property { float: left; margin-right: 0px; }
+	
+	div.jrapid_row > div.jrapid_subrow,
+	div.jrapid_row > div.jrapid_property { margin-right: 10px; }
+	
+	div.jrapid_subrow div.jrapid_property { margin-right: 5px; }
+	div.jrapid_subrow * div.jrapid_property { margin-right: 0px; border:0px; }
+	
+	div.jrapid_form > div.jrapid_property,
+	div.jrapid_column > div.jrapid_property,
+	div.jrapid_subcolumn > div.jrapid_property { border:1px solid #ccc; clear:both; float: left; padding:5px ;/* overflow:hidden;*/ }
+
+	div.jrapid_property  { margin-bottom:7px; }
+	
+	div.jrapid_propertyactions {  margin-left: 11.3em; }
+	
+	div.jrapid_multiline {  height: 200px; overflow-x: hidden; overflow-y: scroll; }
+	
+/* jrapid_checkbox */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.jrapid_checkboxcontainer { float: left; }
+	div.jrapid_checkboxcontainer div.jrapid_checkbox { display:block; margin-bottom:2px; }
+	div.jrapid_checkboxcontainer div.jrapid_checkbox label { margin-left:6px; }
+
+
+/* buttonbar */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.buttonbar { clear: both; margin-top:20px;}

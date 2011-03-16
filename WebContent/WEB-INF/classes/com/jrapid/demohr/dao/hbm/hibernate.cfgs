@@ -1,0 +1,8 @@
+com/jrapid/demohr/dao/hbm/Employee.hbm.xml
+com/jrapid/demohr/dao/hbm/Country.hbm.xml
+com/jrapid/demohr/dao/hbm/State.hbm.xml
+com/jrapid/demohr/dao/hbm/Qualification.hbm.xml
+com/jrapid/demohr/dao/hbm/Interview.hbm.xml
+com/jrapid/demohr/dao/hbm/Course.hbm.xml
+com/jrapid/demohr/dao/hbm/CourseTaken.hbm.xml
+com/jrapid/demohr/dao/hbm/VacationRequest.hbm.xml

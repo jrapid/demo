@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN "" http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Test</title>
+        <script src="jrapid-tags.js" type="text/javascript">/**/</script>
+        <script src="jrapid-runtime.js" type="text/javascript">/**/</script>
+        <link rel="stylesheet" type="text/css" href="css/jrapid-runtime.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jrapid-tags.css"/>
+	</head>
+	<body onLoad="openWindow('Window', document.getElementById('div'));">
+	
+	
+		<div class="__container" id="mycontainer">
+		
+		</div>
+		
+		<textarea class="jrapid_xml" id="xml">
+			<root>
+				<person><name>Juan</name></person>
+				<person><name>Pedro</name></person>
+				<person><name>Jose</name></person>
+			</root>
+		</textarea>
+		
+		
+		<div class="jrapid_xsl" id="xsl" src="xml">
+			<div htmliinner="true">.</div>
+			<textarea style="display: none;">
+				<xslt:for-each select="/root/person">
+					<xslt:value-of select="name" /><br />
+				</xslt:for-each>		
+			</textarea>
+		</div>		
+		
+		<button onclick="
+				var xsl = jrapid.wrap(document.getElementById('xsl'));
+				xsl.refresh();
+			">xslt</button>
+			
+			
+		<div onclick="alert(1);">
+			<button onclick="application.wrapNode(this).setInnerHTML('hola');
+	
+				
+					var container = new Container(document.getElementById('mycontainer'));
+					container.open('upload.jsp');
+					var ev = application.wrapEvent(event);
+					ev.stopPropagation();
+				">a</button>
+		</div>
+		
+		<a href="http://www.google.com" onclick="alert(1); event.preventDefault();">alert 1</a>
+	
+	
+		<div id="div">Window content</div>
+	
+		
+		 <ul class="jrapid_tabpane">
+			<li class="active"><a href="#"><b>Main</b></a></li>
+			<li><a href="#"><b>Advanced</b></a></li>
+		</ul>
+		<div class="jrapid_tab" id="tab_main">
+			Contenido
+		</div>
+		
+		
+		
+		<div htmliclass="com_htmli_ui_MenuBar" class="jrapid_menubar com_htmli_ui_MenuBar">
+            <div onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event));" onMouseOver="jrapid.wrap(this).mouseOver(jrapid.wrapEvent(event));" onMouseOut="this.className = 'com_htmli_ui_MenuBarItem';" onMouseDown="return false;" onselectstart="return false;" caption="Answers" htmliclass="com_htmli_ui_MenuBarItem" class="com_htmli_ui_MenuBarItem">
+                <span>Answers</span>
+                <div class="com_htmli_ui_MenuBarItem__inner" htmliinner="1">
+                    <div htmliclass="com_htmli_ui_Menu" class="com_htmli_ui_Menu">
+                        <table class="com_htmli_ui_Menu__table">
+                            <tbody htmliinner="2">
+                                <tr onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event)); jrapid.openListing(jrapid.wrap(this), 'Answer', 'canvas', '', '', null, null, null, '../forms.Main/Answer_list.html');" onMouseOut="jrapid.wrap(this).mouseout(); jrapid.wrapEvent(event).stopPropagation();" onMouseOver="jrapid.wrap(this).mouseover();" htmliclass="com_htmli_ui_MenuItem" class="com_htmli_ui_Menu" onMouseDown="return false;" onselectstart="return false;">
+                                    <td class="com_htmli_ui_MenuItem__caption" nowrap="nowrap">Answer</td><td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="com_htmli_ui_Menu__shadow">
+                            <div class="com_htmli_ui_Menu__shadowbottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event));" onMouseOver="jrapid.wrap(this).mouseOver(jrapid.wrapEvent(event));" onMouseOut="this.className = 'com_htmli_ui_MenuBarItem';" onMouseDown="return false;" onselectstart="return false;" caption="Exams" htmliclass="com_htmli_ui_MenuBarItem" class="com_htmli_ui_MenuBarItem">
+                <span>Exams</span>
+                <div class="com_htmli_ui_MenuBarItem__inner" htmliinner="1">
+                    <div htmliclass="com_htmli_ui_Menu" class="com_htmli_ui_Menu">
+                        <table class="com_htmli_ui_Menu__table">
+                            <tbody htmliinner="2">
+                                <tr onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event)); jrapid.openListing(jrapid.wrap(this), 'Exam', 'canvas', '', '', null, null, null, '../forms.Main/Exam_list.html');" onMouseOut="jrapid.wrap(this).mouseout(); jrapid.wrapEvent(event).stopPropagation();" onMouseOver="jrapid.wrap(this).mouseover();" htmliclass="com_htmli_ui_MenuItem" class="com_htmli_ui_Menu" onMouseDown="return false;" onselectstart="return false;">
+                                    <td class="com_htmli_ui_MenuItem__caption" nowrap="nowrap">Examination</td><td></td>
+                                </tr>
+                                <tr onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event)); jrapid.openListing(jrapid.wrap(this), 'Subject', 'canvas', '', '', null, null, null, '../forms.Main/Subject_list.html');" onMouseOut="jrapid.wrap(this).mouseout(); jrapid.wrapEvent(event).stopPropagation();" onMouseOver="jrapid.wrap(this).mouseover();" htmliclass="com_htmli_ui_MenuItem" class="com_htmli_ui_Menu" onMouseDown="return false;" onselectstart="return false;">
+                                    <td class="com_htmli_ui_MenuItem__caption" nowrap="nowrap">Subject</td><td></td>
+                                </tr>
+                                <tr onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event)); jrapid.openListing(jrapid.wrap(this), 'QuestionGroup', 'canvas', '', '', null, null, null, '../forms.Main/QuestionGroup_list.html');" onMouseOut="jrapid.wrap(this).mouseout(); jrapid.wrapEvent(event).stopPropagation();" onMouseOver="jrapid.wrap(this).mouseover();" htmliclass="com_htmli_ui_MenuItem" class="com_htmli_ui_Menu" onMouseDown="return false;" onselectstart="return false;">
+                                    <td class="com_htmli_ui_MenuItem__caption" nowrap="nowrap">QuestionGroup</td><td></td>
+                                </tr>
+                                <tr onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event)); jrapid.openListing(jrapid.wrap(this), 'Question', 'canvas', '', '', null, null, null, '../forms.Main/Question_list.html');" onMouseOut="jrapid.wrap(this).mouseout(); jrapid.wrapEvent(event).stopPropagation();" onMouseOver="jrapid.wrap(this).mouseover();" htmliclass="com_htmli_ui_MenuItem" class="com_htmli_ui_Menu" onMouseDown="return false;" onselectstart="return false;">
+                                    <td class="com_htmli_ui_MenuItem__caption" nowrap="nowrap">Question</td><td></td>
+                                </tr>
+                                <tr onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event)); jrapid.openListing(jrapid.wrap(this), 'ProfileSubject', 'canvas', '', '', null, null, null, '../forms.Main/ProfileSubject_list.html');" onMouseOut="jrapid.wrap(this).mouseout(); jrapid.wrapEvent(event).stopPropagation();" onMouseOver="jrapid.wrap(this).mouseover();" htmliclass="com_htmli_ui_MenuItem" class="com_htmli_ui_Menu" onMouseDown="return false;" onselectstart="return false;">
+                                    <td class="com_htmli_ui_MenuItem__caption" nowrap="nowrap">ProfileSubject</td><td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="com_htmli_ui_Menu__shadow">
+                            <div class="com_htmli_ui_Menu__shadowbottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event));" onMouseOver="jrapid.wrap(this).mouseOver(jrapid.wrapEvent(event));" onMouseOut="this.className = 'com_htmli_ui_MenuBarItem';" onMouseDown="return false;" onselectstart="return false;" caption="Profiles" htmliclass="com_htmli_ui_MenuBarItem" class="com_htmli_ui_MenuBarItem">
+                <span>Profiles</span>
+                <div class="com_htmli_ui_MenuBarItem__inner" htmliinner="1">
+                    <div htmliclass="com_htmli_ui_Menu" class="com_htmli_ui_Menu">
+                        <table class="com_htmli_ui_Menu__table">
+                            <tbody htmliinner="2">
+                                <tr onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event)); jrapid.openListing(jrapid.wrap(this), 'Profile', 'canvas', '', '', null, null, null, '../forms.Main/Profile_list.html');" onMouseOut="jrapid.wrap(this).mouseout(); jrapid.wrapEvent(event).stopPropagation();" onMouseOver="jrapid.wrap(this).mouseover();" htmliclass="com_htmli_ui_MenuItem" class="com_htmli_ui_Menu" onMouseDown="return false;" onselectstart="return false;">
+                                    <td class="com_htmli_ui_MenuItem__caption" nowrap="nowrap">Profile</td><td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="com_htmli_ui_Menu__shadow">
+                            <div class="com_htmli_ui_Menu__shadowbottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event));" onMouseOver="jrapid.wrap(this).mouseOver(jrapid.wrapEvent(event));" onMouseOut="this.className = 'com_htmli_ui_MenuBarItem';" onMouseDown="return false;" onselectstart="return false;" caption="Recruiters" htmliclass="com_htmli_ui_MenuBarItem" class="com_htmli_ui_MenuBarItem">
+                <span>Recruiters</span>
+                <div class="com_htmli_ui_MenuBarItem__inner" htmliinner="1">
+                    <div htmliclass="com_htmli_ui_Menu" class="com_htmli_ui_Menu">
+                        <table class="com_htmli_ui_Menu__table">
+                            <tbody htmliinner="2">
+                                <tr onClick="jrapid.wrap(this).click(jrapid.wrapEvent(event)); jrapid.openListing(jrapid.wrap(this), 'Recruiter', 'canvas', '', '', null, null, null, '../forms.Main/Recruiter_list.html');" onMouseOut="jrapid.wrap(this).mouseout(); jrapid.wrapEvent(event).stopPropagation();" onMouseOver="jrapid.wrap(this).mouseover();" htmliclass="com_htmli_ui_MenuItem" class="com_htmli_ui_Menu" onMouseDown="return false;" onselectstart="return false;">
+                                    <td class="com_htmli_ui_MenuItem__caption" nowrap="nowrap">Recruiter</td><td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="com_htmli_ui_Menu__shadow">
+                            <div class="com_htmli_ui_Menu__shadowbottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br><br>
+        
+        <input type="text" onFocus="jrapid.tooltipOn(jrapid.wrap(this));" onBlur="jrapid.tooltipOff(jrapid.wrap(this));" tooltip="This is the tooltip">
+        
+        <div class="jrapid_tooltip">
+			<iframe></iframe>
+			<div></div>
+		</div>
+		
+		<table style="overflow-y: scroll;" onheaderclick="jrapid.order(me, 'Recruiter', ev.getTarget().getCellIndex()); return false;" id="table_1_1" class="jrapid_table">
+			<thead class="jrapid_thead">
+				<th>First name</th>
+				<th>Last name</th>
+				<th>Username</th>
+			</thead>
+			<tbody class="jrapid_tbody">
+				<tr class="jrapid_tr" rowid="{@id}" ondblclick="jrapid.openForm(jrapid.wrap(this), 'Recruiter', 'formcanvas', '{@id}', null, 'Main'); return false;" onclick="jrapid.listingClicked(jrapid.wrap(this), '{@id}');" title="" style="{@style}" id="tr">
+                    <td>Juan</td>
+                    <td>Perez</td>
+                    <td>juan@perez.com</td>
+				</tr>
+				<tr class="jrapid_tr" rowid="{@id}" ondblclick="jrapid.openForm(jrapid.wrap(this), 'Recruiter', 'formcanvas', '{@id}', null, 'Main'); return false;" onclick="jrapid.listingClicked(jrapid.wrap(this), '{@id}');" title="" style="{@style}" id="tr">
+                    <td>Juan</td>
+                    <td>Perez</td>
+                    <td>juan@perez.com</td>
+				</tr>
+				<tr class="jrapid_tr" rowid="{@id}" ondblclick="jrapid.openForm(jrapid.wrap(this), 'Recruiter', 'formcanvas', '{@id}', null, 'Main'); return false;" onclick="jrapid.listingClicked(jrapid.wrap(this), '{@id}');" title="" style="{@style}" id="tr">
+                    <td>Juan</td>
+                    <td>Perez</td>
+                    <td>juan@perez.com</td>
+				</tr>
+				<tr class="jrapid_tr" rowid="{@id}" ondblclick="jrapid.openForm(jrapid.wrap(this), 'Recruiter', 'formcanvas', '{@id}', null, 'Main'); return false;" onclick="jrapid.listingClicked(jrapid.wrap(this), '{@id}');" title="" style="{@style}" id="tr">
+                    <td>Juan</td>
+                    <td>Perez</td>
+                    <td>juan@perez.com</td>
+				</tr>
+			</tbody>
+		</table>
+		
+</body>
+</html>

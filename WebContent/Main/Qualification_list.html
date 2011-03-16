@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN " " http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:exsl="http://exslt.org/common" xmlns:forms="http://www.htmli.com/ns/forms" xmlns:xslt="http://www.htmli.com/xslt" xmlns:java="http://xml.apache.org/xalan/java" xmlns:xalan="http://xml.apache.org/xalan" xmlns:htmli="http://www.htmli.com/ns/ui" xmlns:j="http://www.htmli.com/jhtmli" xmlns:str="http://exslt.org/strings" xmlns:jrapid="http://www.jrapid.com/tld" xmlns:jhtmli="http://www.htmli.com/jhtmli">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+        <title>Qualification</title>
+    </head>
+    <body onload="jrapid.listingOnLoad( 'Qualification', '', 'Qualification' );" class="jrapid">
+        <script type="text/javascript" src="../jrapid-runtime/jrapid-tags.js?v=1.0nb50">/**/</script>
+        <script type="text/javascript" src="../jrapid-runtime/jrapid-runtime.js?v=1.0nb50">/**/</script>
+        <script type="text/javascript">
+					jrapid.experience('../jrapid-runtime', 
+						'flash', 
+						'web', 
+						'', 
+						'default'
+					);
+				</script>
+        <script type="text/javascript">
+			 		if (!window.currentContainer) { window.currentContainer = application; }
+			 	</script>
+        <link href="../jrapid-runtime/css/ui-lightness/jquery-ui-1.8rc2.custom.css" type="text/css" rel="stylesheet"/>
+        <link href="../Main/css/Main.css" type="text/css" rel="stylesheet"/>
+        <link href="../Main/css/Qualification_list.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="../jrapid-runtime/jquery-1.4.2.min.js">/**/</script>
+        <script type="text/javascript" src="../jrapid-runtime/jquery-ui-1.8rc2.custom.min.js">/**/</script>
+        <div id="maindiv" class="maindiv" listing="Qualification@Qualification"> <!-- Filters --> <!-- Tabs -->
+            <div class="jrapid_views">
+                <div class="jrapid_xsl" id="xsl_1_1" url="../xml/Qualification" baseurl="../xml/Qualification" style="display: none;" onrefresh="jrapid.resizeTable(jrapid.wrap(this));" params="jrapid_url">
+                    <div htmliinner="true">.</div>
+                    <textarea rows="10" cols="100" style="display:none;">
+                        <div class="listing_table">
+                            <table class="jrapid_table " id="table_1_1" style="overflow-y: scroll;" onselectstart="return false;" onmousedown="return false;">
+                                <thead class="jrapid_thead">
+                                    <tr onclick="jrapid.order(this, 'Qualification', event); return false;"><th>Name</th></tr>
+                                </thead>
+                                <tbody class="jrapid_tbody" id="tableitems_1_1">
+                                    <xslt:for-each select="/*/*">
+                                        <tr id="tableitem_1_1" style="{@style}" title="" onclick="jrapid.listingToggleTable(this,{position() mod 2}, event); jrapid.listingClicked(this, '{@id}');" rowid="{@id}" class="jrapid_tr" ondblclick="jrapid.form( {{ obj: jrapid.wrap(this), entity: 'Qualification', id: '{@id}', module: 'Main', openWindow: true }} ); return false;"><td>
+                                            <xslt:value-of select="name"/></td></tr>
+                                    </xslt:for-each>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="pagebar">
+                            <xslt:if test="not(/page/@rows = 0)">
+                                <button onclick="jrapid.page(this, 1, '{/page/@total}', true);" class="pages_button">|&amp;lt;</button>
+                                <button onclick="me=jrapid.wrap(this);jrapid.page(this, parseInt(me.getNextElementSibling().getValue())-1, '{/page/@total}');" class="pages_button">&amp;lt;</button>
+                                <select onchange="jrapid.page(this, this.value, '{/page/@total}');" style="width: 40px;" onmouseover="jrapid.pageList(this, '{/page/@page}', '{/page/@total}');" id="pageselect">
+                                    <option value="{/page/@page}" selected="selected">
+                                        <xslt:value-of select="/page/@page"/>
+                                    </option>
+                                </select>
+                                <button onclick="me=jrapid.wrap(this);jrapid.page(this, parseInt(me.getPreviousSibling().getValue())+1, '{/page/@total}');" class="pages_button">&amp;gt;</button>
+                                <button onclick="jrapid.page(this, parseInt('{/page/@total}'), '{/page/@total}');" class="pages_button">&amp;gt;|</button>
+                            </xslt:if>
+                            <xslt:choose>
+                                <xslt:when test="/page/@rows = 0">
+                                    <label>No results found.</label>
+                                </xslt:when>
+                                <xslt:otherwise>
+                                    <label>Showing <b>
+                                            <xslt:value-of select="((/page/@page)-1) * 50 + 1"/>
+                                        </b> to 
+					<xslt:choose>
+                                            <xslt:when test="/page/@page = /page/@total or /page/@rows = 0">
+                                                <b>
+                                                    <xslt:value-of select="/page/@rows"/>
+                                                </b>
+                                            </xslt:when>
+                                            <xslt:otherwise>
+                                                <b>
+                                                    <xslt:value-of select="((/page/@page)) * 50"/>
+                                                </b>
+                                            </xslt:otherwise>
+                                        </xslt:choose>
+					 of <b>
+                                            <xslt:value-of select="concat(' ', /page/@rows, ' ')"/>
+                                        </b>
+                                    </label>
+                                </xslt:otherwise>
+                            </xslt:choose>
+                        </div>
+                    </textarea>
+                </div>
+            </div>
+            <div class="listing_actionsbar" id="actionbar">
+                <select onchange="jrapid.listingChangeView(this);" class="listing_selectaction" id="selectview" style="display: none;">
+                    <option value="table">table</option>
+                </select>
+                <button id="add" onclick="jrapid.openFormFromListing( { actionSrc: this, entity: 'Qualification', canvas: 'formcanvas', defaultset: this.getAttribute('defaultset'), defaultsetparams: this.getAttribute('defaultsetparams'), module: 'Main' } ); return false;">Add</button>
+                <button id="remove" onclick="jrapid.listingRemove(this, 'Qualification'); return false;">Remove</button>
+            </div>
+        </div>
+    </body>
+</html>

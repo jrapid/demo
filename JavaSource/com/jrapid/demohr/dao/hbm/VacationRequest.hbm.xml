@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.jrapid.demohr.entities">
+    <class name="VacationRequest" table="`vacationrequest`" lazy="true">
+        <id name="id" type="long">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="emplyee" class="Employee" cascade="" fetch="join" column="`emplyee`"/>
+        <property name="fromDate" column="`fromdate`" type="calendar_date"/>
+        <property name="toDate" column="`todate`" type="calendar_date"/>
+        <property name="granted" column="`granted`" type="boolean"/>
+    </class>
+</hibernate-mapping>

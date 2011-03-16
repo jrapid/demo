@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="A1" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yyyy HH:mm:ss,SS} %M %-5p - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="error_appender" class="org.apache.log4j.RollingFileAppender" >
+		<param name="file" value="${java.io.tmpdir}/demohr/error.log" />
+		<param name="maxBackupIndex" value="3" />
+		<param name="maxFileSize" value="1001024kb" />
+		<param name="immediateFlush" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yyyy HH:mm:ss,SS} %M %-5p - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter" >
+			<param name="LevelToMatch" value="error"/> 
+            <param name="AcceptOnMatch" value="true"/> 
+		</filter>
+		<filter class="org.apache.log4j.varia.DenyAllFilter"/> 
+	</appender>
+	
+	<appender name="warn_appender" class="org.apache.log4j.RollingFileAppender" >
+		<param name="file" value="${java.io.tmpdir}/demohr/warn.log" />
+		<param name="maxBackupIndex" value="3" />
+		<param name="maxFileSize" value="1001024kb" />
+		<param name="immediateFlush" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yyyy HH:mm:ss,SS} %M %-5p - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter" >
+			<param name="LevelToMatch" value="warn"/> 
+            <param name="AcceptOnMatch" value="true"/> 
+		</filter>
+		<filter class="org.apache.log4j.varia.DenyAllFilter"/>
+	</appender>
+	
+	<appender name="info_appender" class="org.apache.log4j.RollingFileAppender" >
+		<param name="file" value="${java.io.tmpdir}/demohr/info.log" />
+		<param name="maxBackupIndex" value="3" />
+		<param name="maxFileSize" value="1001024kb" />
+		<param name="immediateFlush" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yyyy HH:mm:ss,SS} %M %-5p - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter" >
+			<param name="LevelToMatch" value="info"/> 
+            <param name="AcceptOnMatch" value="true"/> 
+		</filter>
+		<filter class="org.apache.log4j.varia.DenyAllFilter"/>
+	</appender>
+	
+	<appender name="debug_appender" class="org.apache.log4j.RollingFileAppender" >
+		<param name="file" value="${java.io.tmpdir}/demohr/debug.log" />
+		<param name="maxBackupIndex" value="3" />
+		<param name="maxFileSize" value="1001024kb" />
+		<param name="immediateFlush" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yyyy HH:mm:ss,SS} %M %-5p - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter" >
+			<param name="LevelToMatch" value="debug"/> 
+            <param name="AcceptOnMatch" value="true"/> 
+		</filter>
+		<filter class="org.apache.log4j.varia.DenyAllFilter"/>
+	</appender>
+	
+	<appender name="monitor" class="org.apache.log4j.RollingFileAppender" >
+		<param name="file" value="${java.io.tmpdir}/demohr/monitor.xml" />
+		<param name="maxBackupIndex" value="3" />
+		<param name="maxFileSize" value="100kb" />
+		<param name="immediateFlush" value="true" />
+		<layout class="com.jrapid.logging.MonitorLayout" />
+	</appender>
+	
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="error_appender" />
+		<appender-ref ref="warn_appender" />
+		<appender-ref ref="info_appender" />
+		<appender-ref ref="debug_appender" />
+		<appender-ref ref="monitor" />
+	</root>
+
+
+</log4j:configuration>

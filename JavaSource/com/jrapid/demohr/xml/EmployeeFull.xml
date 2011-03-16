@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><mapping xmlns:xalan="http://xml.apache.org/xalan" xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">
+    <class name="com.jrapid.demohr.entities.Employee">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="picture" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="thumb" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="firstName" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="lastName" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="fileNumber" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="status" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="ssn" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="dateOfBirth" type="string" handler="com.jrapid.controller.servers.castor.DateHandler"/>
+        <field name="gender" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="email" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="phone" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="mobile" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="maritalStatus" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="spouse" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="children" type="string" collection="collection" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="address" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="country" type="com.jrapid.demohr.entities.Country" handler="com.jrapid.controller.servers.castor.EntityHandler"/>
+        <field name="state" type="com.jrapid.demohr.entities.State" handler="com.jrapid.controller.servers.castor.EntityHandler"/>
+        <field name="city" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="cv" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="skills" type="string" collection="collection" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="qualifications" type="com.jrapid.demohr.entities.Qualification" collection="collection"/>
+        <field name="coursesTaken" type="com.jrapid.demohr.entities.CourseTaken" collection="collection"/>
+    </class>
+    <class name="com.jrapid.demohr.entities.CourseTaken">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="course" type="com.jrapid.demohr.entities.Course" handler="com.jrapid.controller.servers.castor.EntityHandler"/>
+        <field name="employee" type="com.jrapid.demohr.entities.Employee" handler="com.jrapid.controller.servers.castor.EntityHandler">
+            <bind-xml name="employee">
+                <class name="com.jrapid.demohr.entities.Employee" mode="2">
+                    <field name="id" type="long">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="firstName" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+                    <field name="lastName" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+                    <field name="email" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+                </class>
+            </bind-xml>
+        </field>
+        <field name="completed" type="string" handler="com.jrapid.controller.servers.castor.BooleanHandler"/>
+    </class>
+    <class name="com.jrapid.demohr.entities.Course">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="name" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+    </class>
+    <class name="com.jrapid.demohr.entities.Country">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="name" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+    </class>
+    <class name="com.jrapid.demohr.entities.State">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="name" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+    </class>
+    <class name="com.jrapid.demohr.entities.Qualification">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="name" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+    </class>
+</mapping>

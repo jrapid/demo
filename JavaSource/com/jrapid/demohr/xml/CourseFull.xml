@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><mapping xmlns:xalan="http://xml.apache.org/xalan" xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">
+    <class name="com.jrapid.demohr.entities.Course">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="name" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="description" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="duration" type="string" handler="com.jrapid.controller.servers.castor.IntegerHandler"/>
+    </class>
+</mapping>

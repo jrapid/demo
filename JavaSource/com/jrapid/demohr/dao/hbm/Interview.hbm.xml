@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.jrapid.demohr.entities">
+    <class name="Interview" table="`interview`" lazy="true">
+        <id name="id" type="long">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="employee" class="Employee" cascade="" fetch="join" column="`employee`"/>
+        <property name="title" column="`title`" type="string"/>
+        <property name="interviewDate" column="`interviewdate`" type="calendar_date"/>
+        <component name="start" class="com.jrapid.entities.types.Time">
+            <property name="seconds" column="`start`" type="long"/>
+        </component>
+        <component name="end" class="com.jrapid.entities.types.Time">
+            <property name="seconds" column="`end`" type="long"/>
+        </component>
+        <property name="allDay" column="`allday`" type="boolean"/>
+    </class>
+</hibernate-mapping>

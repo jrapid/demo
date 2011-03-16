@@ -1,0 +1,76 @@
+/* ----------------------------------------------------------------------------- */
+/*	form */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+	/* label */
+	div.jrapid_form > label { display: block; font-size: 12px; font-weight: bold; margin-top: 10px; padding-right:15px; }
+	div.jrapid_property label.jrapid, 
+	div.jrapid_property label.jrapidtop { float:left; margin-bottom:4px; padding-right:15px; text-align:right; width:10em; }
+	table.jrapid_multiline div.jrapid_property label { text-align:left; }
+	label.jrapid_sub { font-size: 11px; font-weight: normal; margin: 0px 0 10px 0; width:auto; text-align:left; }
+
+	/* input select textarea */
+	input, select { font-size: 12px; padding: 2px; }
+	textarea { font-size: 12px; }
+	select.jrapid_select { height:auto; }
+
+/* ----------------------------------------------------------------------------- */
+/*	form layout */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+	div.jrapid_column { float:left; padding-right:15px; }
+	div.jrapid_subcolumn { clear:both; overflow:hidden; }
+	div.jrapid_row { float: left; }
+	div.jrapid_row div { float: left; margin-right:0px; }
+	div.jrapid_property { margin-bottom:7px; }
+
+	/* jrapid_row */ 
+	div.jrapid_row > div.jrapid_subrow,
+	div.jrapid_row > div.jrapid_property { margin-right:10px; }
+
+	/* jrapid_property */
+	div.jrapid_subrow div.jrapid_property { margin-right:5px; }
+	div.jrapid_subrow * div.jrapid_property { border:0px; margin-right:0px; }
+	div.jrapid_form div.jrapid_property,
+	div.jrapid_column div.jrapid_property,
+	div.jrapid_subcolumn div.jrapid_property { clear:both; overflow:hidden; }
+	div.jrapid_property > div { float:left; } 
+
+	/* buttonbar */ 
+	div.buttonbar { clear: both; margin-top:20px; overflow:hidden; padding:0 15px 10px 0; }
+	
+	/* .jrapid_checkboxcontainer */
+	div.jrapid_checkboxcontainer { float: left; overflow:hidden; }
+	div.jrapid_checkboxcontainer div.jrapid_checkbox { float: left; clear:both; padding:0 0 3px 0; }
+	div.jrapid_checkboxcontainer div.jrapid_checkbox input { float: none; vertical-align:bottom; }
+	div.jrapid_checkboxcontainer div.jrapid_checkbox label { float: none; text-align:left; padding-left:6px; }
+	
+	/* legend span */
+	div.jrapid_form legend span { margin:0 6px; }
+	
+	/* jrapid_form */
+	div.jrapid_property div.jrapid_form { float:left; overflow:hidden; }
+	
+	/* table.jrapid_multiline */
+	table.jrapid_multiline { width:auto; }
+	table.jrapid_multiline th { padding:2px 8px 2px 6px; }
+	table.jrapid_multiline td { padding:5px 6px; }
+	/*table.jrapid_multiline td input { margin-left:-5px; }*/
+
+	/* jrapid_row */
+	div.jrapid_row { clear:both; display:block; }
+	div.jrapid_row div.jrapid_property  { clear:none; float:left; }
+	div.jrapid_row div.jrapid_property label.jrapidtop { margin:5px 4px 5px 10px; }
+	
+	/* jrapid_tab - jrapid_multiline */
+	div.jrapid_tab { overflow:hidden;  }
+/*	*:first-child+html div.jrapid_tab { background:red; border:1px solid red !important; content: "."; clear: both; display: inline-block; }*/
+	* html div.jrapid_tab { content: "."; clear: both; display: inline-block; }	
+	div.jrapid_multiline { float:left; }
+	
+	/* ul.jrapid_tabpane */
+	ul.jrapid_tabpane { content: "."; display: inline-block; /*clear:inherit;*/ height:20px; margin:0 0 -1px; padding:0; text-align:left; }
+
+	/* label */	
+	label.jrapid_column,
+	label.jrapid_row,
+	label.jrapid_subcolumn,
+	label.jrapid_subrow { font-weight: bold; padding-bottom: 10px; text-align: right; width:10em; }

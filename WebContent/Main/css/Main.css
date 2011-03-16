@@ -1,0 +1,12 @@
+#div_countriesFilter {
+	border: 1px solid #AAA;
+	height: 300px;
+	overflow-y: scroll;
+	padding: 3px;
+	width: 150px;
+}
+
+#canvas {
+	overflow-y: scroll;
+	height: 300px;	
+}

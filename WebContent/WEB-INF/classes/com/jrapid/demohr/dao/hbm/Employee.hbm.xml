@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.jrapid.demohr.entities">
+    <class name="Employee" table="`employee`" lazy="true">
+        <id name="id" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="picture" column="`picture`" type="string"/>
+        <property name="thumb" column="`thumb`" type="string"/>
+        <property name="firstName" column="`firstname`" type="string" not-null="true"/>
+        <property name="lastName" column="`lastname`" type="string" not-null="true"/>
+        <property name="fileNumber" column="`filenumber`" type="string"/>
+        <property name="status" column="`status`" type="string"/>
+        <property name="ssn" column="`ssn`" type="string"/>
+        <property name="dateOfBirth" column="`dateofbirth`" type="calendar_date"/>
+        <property name="gender" column="`gender`" type="string"/>
+        <property name="email" column="`email`" type="string"/>
+        <property name="phone" column="`phone`" type="string"/>
+        <property name="mobile" column="`mobile`" type="string"/>
+        <property name="maritalStatus" column="`maritalstatus`" type="string"/>
+        <property name="spouse" column="`spouse`" type="string"/>
+        <property name="address" column="`address`" type="text"/>
+        <many-to-one name="country" class="Country" cascade="" column="`country`"/>
+        <many-to-one name="state" class="State" cascade="" column="`state`"/>
+        <property name="city" column="`city`" type="string"/>
+        <property name="cv" column="`cv`" type="string"/>
+        <set name="children" table="employee_children">
+            <key column="`employee`"/>
+            <element column="`children`" type="string"/>
+        </set>
+        <set name="skills" table="employee_skills">
+            <key column="`employee`"/>
+            <element column="`skills`" type="string"/>
+        </set>
+        <set name="qualifications" table="employee_qualifications">
+            <key column="`employee`"/>
+            <many-to-many class="Qualification" column="`qualifications`"/>
+        </set>
+        <set name="coursesTaken" cascade="all-delete-orphan" inverse="true">
+            <key column="`employee`" on-delete="cascade"/>
+            <one-to-many class="CourseTaken"/>
+        </set>
+    </class>
+</hibernate-mapping>

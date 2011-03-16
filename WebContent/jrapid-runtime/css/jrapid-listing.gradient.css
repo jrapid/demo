@@ -1,0 +1,43 @@
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */           
+	div.listing_table table.jrapid_table { 
+	background:#022b61 url(listing/gradient/gradient-jrapid_table.png) center top repeat-x;
+	border:none;
+	}
+	table.jrapid_table tbody.jrapid_tbody { 
+	background-color: transparent;
+	background-image: none;	 	
+	border:none;
+	}
+	table.jrapid_table thead th { 
+	background:#001c3d;
+	background:url(listing/gradient/gradient-thead-th.png) left top repeat;
+	border:none; 
+	border-bottom:1px solid #001c3d;
+	color:#c0d6f1;
+	padding:4px 3px;
+	text-transform:uppercase;
+	}
+	table.jrapid_table thead th:hover { 
+	background:#001c3d; /*url(listing/gradient/gradient-thead-th-hover.png) left top repeat-x*/
+	color:#fff;
+	}
+	table.jrapid_table tr:hover td { 
+	background-color:#001c3d !important; 
+	background-image:none !important;
+	color:#c0d6f1;
+	}
+	table.jrapid_table td { 
+	background-color: transparent;
+	background-image: none;	 	
+	border:none;
+	border-bottom:1px solid #6caadb;
+	padding:6px 3px;
+	color:#001c3d;
+	}
+	tr.jrapid_table_tr__selected { 
+	background-color:#c0d6f1 !important;
+	background-image:none !important;
+	color: #fff !important; 
+	}  	

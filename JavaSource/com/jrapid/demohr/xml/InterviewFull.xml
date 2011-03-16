@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><mapping xmlns:xalan="http://xml.apache.org/xalan" xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">
+    <class name="com.jrapid.demohr.entities.Interview">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="employee" type="com.jrapid.demohr.entities.Employee" handler="com.jrapid.controller.servers.castor.EntityHandler"/>
+        <field name="title" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="interviewDate" type="string" handler="com.jrapid.controller.servers.castor.DateHandler"/>
+        <field name="start" type="string" handler="com.jrapid.controller.servers.castor.TimeHandler"/>
+        <field name="end" type="string" handler="com.jrapid.controller.servers.castor.TimeHandler"/>
+        <field name="allDay" type="string" handler="com.jrapid.controller.servers.castor.BooleanHandler"/>
+    </class>
+    <class name="com.jrapid.demohr.entities.Employee">
+        <field name="id" type="long">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="firstName" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="lastName" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+        <field name="email" type="string" handler="com.jrapid.controller.servers.castor.StringHandler"/>
+    </class>
+</mapping>

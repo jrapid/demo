@@ -1,0 +1,26 @@
+
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */           
+	table.jrapid_table thead th { 
+	background: url(layout/table/table01-thead-th.png) left top repeat-x; 
+	border:1px solid #d0d0d0;
+	}
+	table.jrapid_table thead th:hover { 
+	background-color: #03476f;
+	}
+	table.jrapid_table tr:hover td { 
+	background:#c6e1e3;
+	color:#000000;
+	}
+	table.jrapid_table td { 
+	border:none;
+	border-bottom:1px dotted gray;
+	padding:5px 5px 5px 0;
+	}
+	table.jrapid_table tr.jrapid_table_tr__selected { 
+	border:none; 
+	background-color: #99BCBF !important; 
+	color: #fff; 
+	}  
+

@@ -1,0 +1,14 @@
+
+/* INPUT - SELECT - TEXTAREA */
+input, select, textarea {
+    background: url("form/form-modern2-bk.png") left top repeat-x;
+    border:1px solid #ccc;
+	font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    font-family: Georgia, serif;
+    }
+
+/* LABEL - SPAN - SUB_LABEL */
+label {
+	font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    font-family: Georgia, serif;
+    }

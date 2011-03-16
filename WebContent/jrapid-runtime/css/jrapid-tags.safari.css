@@ -1,0 +1,223 @@
+	@import url(master/master.css);
+
+/* ----------------------------------------------------------------------------- */
+/* Window */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	/* title - caption */
+	td.jrapid_window__title { cursor: default; font: 11px "Trebuchet MS", Tahoma, Verdana, Arial,sans-serif; color: #000000; height: 20px; padding: 10px 5px 5px 0px !important; background-image: url(safari/Windows/top-shadow.png); border:0px solid red; text-align:left !important; }	
+	div.jrapid_window__caption { margin-left: 6px; }
+
+	/* inner - right - left - bottom - top */
+	td.jrapid_window__inner { background:#fff; }
+    td.jrapid_window__right {background-image: url(safari/Windows/right-shadow.png); background-position: left top; background-repeat: repeat-y; width: 16px; }
+	td.jrapid_window__bottom { background-image: url(safari/Windows/bottom-shadow.png); height: 16px; }
+	td.jrapid_window__bottoml { background-image: url(safari/Windows/bottom-left-shadow.png); background-position: top right; background-repeat: no-repeat; height: 15px; padding: 0px 0px 0px 0px; font-size: 16px; font-family: "Trebuchet MS", Tahoma, Verdana, Arial,sans-serif; }
+	td.jrapid_window__bottomr { background-image: url(safari/Windows/bottom-right-shadow.png); background-position: top left; background-repeat: no-repeat; font-family: "Trebuchet MS", Tahoma, Verdana, Arial,sans-serif; }
+	td.jrapid_window__left {background: url(safari/Windows/left-shadow.png) right top repeat-y; width: 16px; }   
+    td.jrapid_window__topright { background-image: url(safari/Windows/top-right-shadow.png); background-position: top left; background-repeat: repeat-y; width: 16px; font-size: 0px; padding: 0px 7px 0px 8px; cursor: e-resize; }
+	td.jrapid_window__topleft { background-image: url(safari/Windows/top-left-shadow.png); width: 15px; padding: 0px 7px 0px 8px; }
+
+    /* buttons */
+	a.jrapid_window__closebutton { width: 14px; height: 15px; float: right; background-image: url(safari/Windows/close_button_circle.gif); }
+	a.jrapid_window__closebutton:hover { background-image: url(safari/Windows/close_button_hover_circle.gif); }  
+	a.jrapid_window__maxbutton { width: 14px; height: 15px; float: right; background-image: url(safari/Windows/maximize_button_circle.gif); }
+	a.jrapid_window__maxbutton:hover { background-image: url(safari/Windows/maximize_button_hover_circle.gif); }
+	a.jrapid_window__minbutton { width: 14px; height: 15px; float: right; background-image: url(safari/Windows/minimize_button_circle.gif);    }   
+	a.jrapid_window__minbutton:hover { background-image: url(safari/Windows/minimize_button_hover_circle.gif); }
+	a.jrapid_window__helpbutton { width: 14px; height: 15px; float: right; background-image: url(safari/Windows/help_button.gif); }           
+	a.jrapid_window__helpbutton:hover { background-image: url(safari/Windows/help_button_hover.gif); }
+	a.jrapid_window__restorebutton { width: 14px; height: 15px; float: right; background-image: url(safari/Windows/restore_button_circle.gif); }
+	a.jrapid_window__restorebutton:hover { background-image: url(safari/Windows/restore_button_hover_circle.gif); }				
+				
+/* ----------------------------------------------------------------------------- */
+/* Menu  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+    div.menucontainer { background: url(safari/Menu/menu_header.gif) 0px 0px repeat-x; }
+	ul.menubar { background: none; border:0px; height:auto; }
+    ul.menubar li a,
+    ul.menubar li a:visited { background: url(safari/Menu/menu_header.gif) 0px 0px repeat-x; border:none; color:#000; text-decoration:none; }
+	ul.menubar li:hover a,    
+    ul.menubar li a:hover { background-image: none !important; background-color: #818181; color:#fff; }
+	ul.menubar li li { border-top:1px dashed #ddd; }
+	ul.menubar li:hover ul li a,
+	ul.menubar li a:hover ul li a  { background-image: none; background-color:#fff; color: #666; }
+	ul.menubar li:hover ul li:hover a,
+	ul.menubar li a:hover ul li a:hover { background-color: #818181; color: #fff; }	
+    ul.menu { background-color:#fff; border:1px solid #ccc; }
+	
+/* ----------------------------------------------------------------------------- */
+/* toolbar  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	ul.toolbar { display: none;}
+
+/* ----------------------------------------------------------------------------- */
+/* Tab  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+	div.jrapid_tab { border:1px solid #919b9c; }
+	ul.jrapid_tabpane li a {  color:#666; background: url(safari/TabPane/item-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li a b { background: url(safari/TabPane/item-right.gif) right top no-repeat; }
+	ul.jrapid_tabpane li a:hover { color:black; background: url(safari/TabPane/selected-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li a:hover b { background: url(safari/TabPane/selected-right.gif) right top no-repeat; }
+	ul.jrapid_tabpane li.active a,
+	ul.jrapid_tabpane li.active a:hover,
+	ul.jrapid_tabpane li.active a:active { color:black; background: url(safari/TabPane/selected-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li.active a b,
+	ul.jrapid_tabpane li.active a:hover b,
+	ul.jrapid_tabpane li.active a:active b { background: url(safari/TabPane/selected-right.gif) right top no-repeat; }
+
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */                         
+	table.jrapid_table thead th { background: url('safari/TH/header-back.gif') left top repeat-x; border:1px solid #ececec; }          
+	table.jrapid_table thead th:hover { background: url('safari/TH/header-back-sel.gif') left top repeat-x; }
+	table.jrapid_table td { border-bottom: 1px solid #ececec; border-right: 1px solid #ececec; }        
+	tr.jrapid_table_tr__selected { background-color: #87a2b2; }
+
+/* ----------------------------------------------------------------------------- */
+/* bi */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	table.bi_ct td { border: 1px solid #eee; }
+	table.bi_ct thead th { background: #d3d3d3 url(safari/bi/views.png) left top repeat-x; border-left: 1px solid #eee; color: #333; }
+	table.bi_ct tbody th { background: #ededed url(safari/bi/tbody-th.jpg) left top repeat-x; }
+	table.bi_ct thead th a.bi_ctorder { color: #333; }
+	/* ----------------------------------------------------------------------------- */
+	/* BI - windows - table  */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
+	.bi_tablehead { background: #bccfe9 url(safari/bi/views.png) left top repeat-x; border-left: 1px solid #bbcfe8; color: #333; }
+	.bi_tableheadrows { background-color: #fff; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-bottom: 1px solid #aca899; border-right: 1px solid #aca899; }
+	.bi_table { border: 1px solid #CFE2F1; color: #333;  }
+	/* ----------------------------------------------------------------------------- */
+	/* BI - headerContent  */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	#container div.headerContent { background: #f3f3f3 url(safari/bi/thead-th-2.jpg) left bottom repeat-x; border: 1px solid #ccc; color: #000; }
+	#container div.headerContent span.bi_title { color: #000; }
+	#container div.headerContent ul.headerNavegation li a { color: #333;  }
+	#container div.headerContent ul.headerNavegation li a:hover { background: #818181; color: #fff; }
+	#container div.headerContent ul.headerNavegation li.activo a,
+	#container div.headerContent ul.headerNavegation li.activo a:link,
+	#container div.headerContent ul.headerNavegation li.activo a:hover,
+	#container div.headerContent ul.headerNavegation li.activo a:active { background: #818181; color: #fff; }	
+	
+/* ----------------------------------------------------------------------------- */
+/* Tooltips */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */                         
+	.jrapid_tooltip div { background:#ececec; color: #666; border:1px solid #ccc; } 
+
+/* ----------------------------------------------------------------------------- */
+/* Accordeon */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */     
+	div.jrapid_accordeon { background: none; }
+	div.jrapid_accordeonitem {  font-size: 11px; font-family: "Trebuchet MS", Tahoma, Verdana, Arial, sans-serif; border:1px solid #ccc; border-top:none; margin:0px 15px 10px 0px; }     
+	button.jrapid_accordeonitem_button { text-transform:uppercase; color:#333; padding: 6px 0 5px; background: url(safari/Menu/menu_header.gif) repeat-x; border:none; min-height:24px; }
+	div.jrapid_accordeonitem_body { background:url(safari/Accordeon/layout-accordeon.png) repeat-x scroll left top #f4f4f4; overflow: hidden; padding: 10px 15px; }	
+
+/* ----------------------------------------------------------------------------- */
+/* Form */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div#pagebar > button, 
+	input#submit, 
+	button.jrapid_filebutton { background: #ECE9D8 url(flash/header-bg.gif) repeat-x !important; border:1px solid #ccdaee !important; padding:2px !important; margin-left:0px !important; } 	
+	div#pagebar > button { margin-left:0px !important; padding:2px !important; } 
+	div#pagebar > button:hover,
+	div#actionbar > button:hover  { border:1px solid #5a7398 !important; } 
+	select#pageselect { margin:0px 6px !important; }
+	select.jrapid_select { height:auto	}
+	div#pagebar > label { font-family:"Trebuchet MS", Tahoma,Verdana,Arial; margin-left:10px; }	
+	div#pagebar { margin-bottom:10px; }
+	/* ----------------------------------------------------------------------------- */
+	/* 	buttons */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	input#submit,
+	div#actionbar > button,
+	div.buttonbar button,
+	div.buttonbar input,
+	button.jrapid_filebutton { background: #fff url(standard/Button/layout-input-submit-grey.jpg) left top no-repeat !important; border:1px solid #aaa !important; color:#333; cursor:pointer; height:auto; margin-left:6px; padding:4px 4px 4px 11px !important; text-transform:uppercase; }
+	/* hover */
+	input#submit:hover,
+	div.buttonbar input:hover,
+	div.buttonbar button:hover,
+	button.jrapid_filebutton:hover { background-position: 0px -29px !important; border-color:#666; color:#000; }
+	/* active */
+	input#submit:active,
+	div.buttonbar button:active,
+	div.buttonbar input:active,
+	button.jrapid_filebutton:active { background-position: 0px -58px !important; border-color:#000; outline: none !important; } 
+	/* pagebar */
+	div#pagebar > button { background: #cecece url(safari/Button/layout-input-submit.png) repeat-x !important; border:1px solid #ccc !important; color:#000; cursor:pointer; /*font-size:1.2em;*/ height:auto; margin:0px; padding:0px; text-transform:uppercase; }  
+	div#pagebar > button:hover { border-color:#939393 !important; color:#000; /*font-size:1.2em;*/ }
+	div.container__div#pagebar > button:active { background-position: 0px -29px !important; outline: none !important; } 	
+	/* ----------------------------------------------------------------------------- */
+	/* 	fieldset legend input select */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	fieldset#filterfieldset { border:none; /*border:1px solid #ccc; background-color:#fff;*/ margin-left:0px; padding-left:0px; }	
+	fieldset#filterfieldset legend { display:none; }
+	fieldset#filterfieldset input,
+	fieldset#filterfieldset select { margin-right:6px; border:1px solid #aaa; }
+
+	/* ----------------------------------------------------------------------------- */
+    /*	entitycollection is the default widget for properties collection of entities */
+    /* 	window_select_window a */
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */  	
+	div.jrapid_entitycollection a, 
+	div.window_select_window a { background: #fff url(safari/Button/layout-input-submit.png) left top repeat-x !important; border:1px solid #ccc !important; padding:3px 8px 3px 8px; }
+	div.jrapid_entitycollection a span,
+	div.window_select_window a span { background:none; height:auto; padding:0px; }
+	/* hover */	
+	div.jrapid_entitycollection a:hover,
+	div.window_select_window a:hover { border-color:#939393 !important; }
+	div.jrapid_entitycollection a:hover span, 
+	div.window_select_window a:hover span { background: none; }
+	/* active */	
+	div.jrapid_entitycollection a:active, 
+	div.window_select_window a:active { background-position: 0px -29px !important; border:1px solid #273941; outline: none !important; }
+	div.jrapid_entitycollection a:active span, 
+	div.window_select_window a:active span { background: none; }	
+	
+/* ----------------------------------------------------------------------------- */
+/* body */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
+	* { margin: 0px; padding: 0px; outline: 0; }
+	body { background: #fff url("safari/layout-body.png") left top repeat-x; font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif }
+	
+/* ----------------------------------------------------------------------------- */
+/* wrap */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div#wrap { background: #cdcdcd; }
+	
+/* ----------------------------------------------------------------------------- */
+/* header */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.header { background: #cdcdcd url(safari/layout-header.png) left top repeat-x; }
+	div.header_inner { display:block; margin:0px auto; position:relative; width:980px; }
+	div.header_inner h1 { color:#333; font-size:.9em; padding-top:10px; }
+	div.header_inner h2 { color:#333; font-size:.8em; font-weight:normal; margin-top:4px; }
+	div.header_inner button.settings { position:absolute; right:50px; top:20px; }
+	    
+/* ----------------------------------------------------------------------------- */
+/* footer */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.footer { background:#aaa; border-top:1px dashed #ccc; clear:both; margin-top:20px; padding:10px 0px; }
+	div.footer_inner { color:#000; font-size:.7em; margin:0px auto; width:980px;}		
+	
+/* ----------------------------------------------------------------------------- */
+/* font-family */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	/*  body  */		body, 
+	/*  Table  */		table.jrapid_window__table,
+						td.jrapid_window__title,
+	/*  Tab  */			div.jrapid_tab,
+						ul.jrapid_tabpane li a,
+						.jrapid_tooltip,
+	/*  table  */		table.jrapid_table, td, label,
+	/*  bi  */			.bi_table,
+						h2.bi_title,
+						h3.bi_title,
+	/*  accordeon  */	div.jrapid_accordeonitem,     
+						button.jrapid_accordeonitem_button,
+	/*  generic  */		legend, input.number, fieldset, button, input, input.submit, select, textarea .suggest,
+						label.filter, 			
+						div#pagebar > label,
+						.listing_thumbnails_more
+						
+						{ font-family: "Trebuchet MS", Helvetica, sans-serif; }	
+	

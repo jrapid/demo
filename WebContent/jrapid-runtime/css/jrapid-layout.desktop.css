@@ -1,0 +1,37 @@
+
+/* ----------------------------------------------------------------------------- */
+/* html - body */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	html, body { margin:0px; overflow:hidden; }
+
+/* ----------------------------------------------------------------------------- */
+/* Wrap */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div#wrap { background: none; }
+
+/* ----------------------------------------------------------------------------- */
+/* Header - Footer */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.header, div.footer { display: none; }
+	
+/* ----------------------------------------------------------------------------- */
+/* Menu */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.menucontainer { display:block; }
+	ul.menu { position: absolute; list-style: none; display:none; }
+	ul.menubar { list-style: none; margin-left: 0; padding: 0; height: 30px; }
+	ul.menubar li { margin: 0; float:left; }
+	ul.menubar li li { margin: 0; float:none; display:block; }
+	ul.menubar li a { display: block; padding: 5px; text-decoration: none; width: 100%; }
+	html>body ul.menubar li a { width: auto; }
+	li.menubaritem:hover ul.menu { display: block !important; }
+	ul.menubar li li a  { display: block; text-decoration: none; width:130px !important; }
+
+/* ----------------------------------------------------------------------------- */
+/* Accordeon */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
+	.jrapid_accordeonitem_body_hidden { display: none; }
+	div.jrapid_accordeonitem { margin: 0px !important; }
+	button.jrapid_accordeonitem_button { margin: 0px; }
+	
+	

@@ -1,0 +1,39 @@
+/* ----------------------------------------------------------------------------- */
+/* Wrap */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div#wrap { background: none; }
+
+/* ----------------------------------------------------------------------------- */
+/* Header */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.header { clear:both; height:58px; margin-bottom:0px; }
+	div.header_inner { display:block; margin:0px auto; position:relative; width:980px }
+
+/* ----------------------------------------------------------------------------- */
+/* Container */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.container { width: 980px; margin: 10px auto 0 auto !important; position:relative; }
+	div.container > button { clear:both; }
+	div#panel { float:left; margin-top:15px; width:750px }
+
+	/* botones /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.listing_actionsbar { margin-top:10px; }
+	
+/* ----------------------------------------------------------------------------- */
+/* Menu Vertical */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.menucontainer { background-image:none !important; width:160px; height:auto; position:relative;  margin: 15px 15px 0 0; z-index:100; float:left; z-index:1; }
+	ul.menubar { padding:0; margin:0; list-style-type: none; background:transparent; width:160px; height:auto; float:left; }
+	ul.menubar li ul { padding:0; margin:0; float:left; list-style-type: none; visibility:hidden; position:absolute; height:0; overflow:hidden; top:0; left:145px; }
+	/* li a */
+	ul.menubar li { float:left; }
+	ul.menubar li a,
+	ul.menubar li a:visited { display:block; float:left; width:135px; min-height:16px; padding: 6px 15px 6px 10px; }
+	ul.menubar li:hover {position:relative; z-index:90;}
+	/* li ul li a */
+	ul.menubar li:hover ul,
+	ul.menubar li a:hover ul { visibility:visible; position:absolute; height:auto;  overflow:visible; }
+	ul.menubar li:hover ul li a,
+	ul.menubar li a:hover ul li a { display:block; text-decoration:none; }
+
+		

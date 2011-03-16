@@ -1,0 +1,35 @@
+/* ----------------------------------------------------------------------------- */
+/* Wrap */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div#wrap { background: none; }
+	
+/* ----------------------------------------------------------------------------- */
+/* Header */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.header { clear:both; height:58px; margin-bottom:0px; }
+	div.header_inner { display:block; margin:0px auto; position:relative; width:980px }
+
+/* ----------------------------------------------------------------------------- */
+/* Container */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.container { width: 980px; margin: 10px auto 0 auto !important; position:relative; }
+	div.container > button { clear:both; }
+	div#panel { float:left; margin-top:15px; width:750px }
+
+	/* botones /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.listing_actionsbar { margin-top:10px; }
+	
+/* ----------------------------------------------------------------------------- */
+/* Menu Vertical Desplegado */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.menucontainer { background-image:none; background-color:inherit; float:left; margin: 15px 15px 0 0; overflow:hidden; width:160px; }
+	ul.menubar { padding:0; margin:0; list-style-type: none; width:160px; height:auto; float:left; }
+	/* li a */
+	ul.menubar li { display:block; }
+	ul.menubar li a,
+	ul.menubar li a:visited { display:block; width:135px; min-height:16px; padding: 6px 15px 6px 10px; }
+	/* li ul li a */
+	ul.menubar li li a,
+	ul.menubar li:hover ul li a,
+	ul.menubar li a:hover ul li a { display:block; width:133px !important; }
+	ul.menu { background-color:inherit; border-top:none; margin:-2px 0 5px; }		

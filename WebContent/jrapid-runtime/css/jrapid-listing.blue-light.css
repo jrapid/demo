@@ -1,0 +1,31 @@
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */           
+	table.jrapid_table thead th { 
+	background: url(layout/table/table03-thead-th.png) left top repeat-x; 
+	border:none;	
+	border-bottom:1px solid #fff;
+	color:#333399;
+	padding:8px 5px;
+	}
+	table.jrapid_table thead th:hover { 
+	background-color: #333399;
+	color:#fff;
+	}
+	table.jrapid_table tr:hover td { 
+	background:#d0dafd url(layout/table/table03-tbody-tr-hover.png) left top repeat-x; 
+	color:#333399;
+	}
+	table.jrapid_table td { 
+	background: #e8edff url(layout/table/table03-tbody-tr.png) left top repeat-x; 	
+	border:none;
+	border-bottom:1px solid #fff;
+	color:#666699;
+	padding:8px 5px;
+	}        
+	tr.jrapid_table_tr__selected, tr.jrapid_table_tr__selected td { 
+	background:#d0dafd url(layout/table/table03-tbody-tr-hover.png) left top repeat-x; 
+	color:#333399 !important;
+	font-weight:bold !important;
+	padding:8px 5px;
+	}

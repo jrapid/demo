@@ -1,0 +1,170 @@
+	@import url("master/master.css");
+
+/* ----------------------------------------------------------------------------- */
+/* Window */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+	/* table - td - title - caption */
+	table.jrapid_window__table { opacity: 0.93; filter: alpha(opacity=93); font-family: "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; padding:15px; background: #000 url("futuristic/Windows/windows-header.jpg") left top repeat-x !important; }
+	td.jrapid_window__title { font: 11px "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; color: #ffffff; background-image: url("futuristic/Windows/top.gif") !important; border:none !important; }	
+
+	/* inner - right - left - bottom - top */   
+	td.jrapid_window__inner { background:#060a0f; opacity: 0.93; filter: alpha(opacity=93); color:#aec7e2; font-size: 11px; margin:4px; padding:4px; }
+    td.jrapid_window__right { background-image: none !important; background-color: #000 !important; width: 4px; cursor: e-resize; }
+	td.jrapid_window__bottom { background-image: url("futuristic/Windows/bottom.gif"); background-position: top; background-repeat: repeat-x; }
+	td.jrapid_window__bottoml { background: url("futuristic/Windows/bottom.gif") top right no-repeat; }
+	td.jrapid_window__bottomr { background: url("futuristic/Windows/bottom.gif") top left no-repeat; }
+	td.jrapid_window__left { background-image: none !important; background-color: #000 !important; width: 4px; }
+	td.jrapid_window__topright { background: url("futuristic/Windows/topright.gif") top left repeat-y; }
+	td.jrapid_window__topleft { background: url("futuristic/Windows/topleft.gif") top right repeat-y }
+
+	/* buttons */
+    a.jrapid_window__closebutton,
+    a.jrapid_window__maxbutton,
+    a.jrapid_window__minbutton,
+    a.jrapid_window__helpbutton,
+    a.jrapid_window__restorebutton { background-repeat: no-repeat; background-position: 0px 0px; margin-right: 4px; height: 13px; width: 12px; }
+	/* a:link */
+    a.jrapid_window__closebutton { background-image: url("futuristic/Windows/close_button.gif") !important; }
+    a.jrapid_window__maxbutton { background-image: url("futuristic/Windows/maximize_button.gif") !important; }
+    a.jrapid_window__minbutton { background-image: url("futuristic/Windows/minimize_button.gif") !important;  }
+    a.jrapid_window__helpbutton { background-image: url("futuristic/Windows/help_button.gif") !important; }
+	a.jrapid_window__restorebutton { background-image: url("futuristic/Windows/restore_button.gif") !important; }
+	/* hover */
+    a.jrapid_window__closebutton:hover,
+    a.jrapid_window__maxbutton:hover,
+    a.jrapid_window__minbutton:hover,
+    a.jrapid_window__helpbutton:hover,
+    a.jrapid_window__restorebutton:hover { background-position: 0px -13px !important; }	
+	
+/* ----------------------------------------------------------------------------- */
+/* Menu  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+    div.menucontainer { background: none; }
+	ul.menubar { background: none; border:0px; height:auto; }
+    ul.menubar li a,
+    ul.menubar li a:visited { background: #000; border:none; color:#aaa; text-decoration:none; }
+	ul.menubar li:hover a,    
+    ul.menubar li a:hover { background-image: none; background-color: #666 !important; color:#fff; }
+	ul.menubar li li { border:none; }
+	ul.menubar li:hover ul li a,
+	ul.menubar li a:hover ul li a  { background-image: none; background-color:#000 !important; color: #aaa; }
+	ul.menubar li:hover ul li:hover a,
+	ul.menubar li a:hover ul li a:hover { background-image: none; background-color: #666 !important; color:#fff; }	
+    ul.menu { background-color: #000; border:none; }	
+		
+/* ----------------------------------------------------------------------------- */
+/* toolbar  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    ul.toolbar { background-color: #000; border:none;  }
+    ul.toolbar li a { background-image: none; margin:1px 1px 0px 1px; padding: 2px 6px; height:23px; display:block; color:#AEC7E2; }
+    ul.toolbar li a:hover {  margin: 0px; background-image: none; background-color: #0b1118; border:none3;}
+
+/* ----------------------------------------------------------------------------- */
+/* Tab  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+	div.jrapid_tab { color:#aec7e2; background:#0b1118; border:none; padding:5px; clear:both; font:11px "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;}
+	ul.jrapid_tabpane { float:left; text-align:left; height: 20px; margin: 0 0 -1px 0; padding:0px;}
+	ul.jrapid_tabpane li { float:left; display:block; margin:0px; padding:0px; }
+	ul.jrapid_tabpane li a { outline:none !important; background: url(futuristic/TabPane/item-right.gif) right top no-repeat; color:#aec7e2; font-family: "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; float:left; text-decoration:none; display:block;  margin: -1px 0px 0px 0px; width: auto; height: 20px; font-size:11px;  text-align: center; }
+	ul.jrapid_tabpane li a b { outline:none !important; background: url(futuristic/TabPane/item-left.gif) left top no-repeat; margin:0 2px 0 0; color:#aec7e2; float:left; display:block; padding:3px 12px 1px 12px; height: 20px; cursor:pointer; font-weight:normal;  }
+	ul.jrapid_tabpane li a:hover { outline:none !important; color:#aec7e2; background: url(futuristic/TabPane/selected-right.gif) right top no-repeat; cursor:pointer; color:black; margin-top:0px;  text-decoration:none; }
+	ul.jrapid_tabpane li a:hover b { outline:none !important; padding:3px 12px 1px 12px; margin-right:2px; background: url(futuristic/TabPane/selected-left.gif) left top no-repeat; cursor:pointer; }
+	ul.jrapid_tabpane li.active a,
+	ul.jrapid_tabpane li.active a:hover,
+	ul.jrapid_tabpane li.active a:active { outline:none !important; cursor:pointer; color:#aec7e2; margin-top:0px; background: url(futuristic/TabPane/selected-right.gif) right top no-repeat; text-decoration:none; }
+	ul.jrapid_tabpane li.active a b,
+	ul.jrapid_tabpane li.active a:hover b,
+	ul.jrapid_tabpane li.active a:active b { outline:none !important; margin-right:2px; color:#aec7e2; background: url(futuristic/TabPane/selected-left.gif) left top no-repeat; font-weight:normal; cursor:pointer; }
+	.jrapid_xmlmultiple { display: none; }
+	.jrapid_xml { display: none; }
+
+/* ----------------------------------------------------------------------------- */
+/* Tooltips */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */         
+	.jrapid_tooltip  { background:#ececec; color: #666; border:none; padding: 4px; white-space:nowrap; width: auto; position: absolute; z-index: 1; font:11px tahoma, verdana, sans-seif; } 
+
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */         
+	table.jrapid_table { width: 100%;  *border-collapse: collapse; border-spacing: 0px; font: 11px "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; overflow: auto; overflow-y: scroll; overflow-x: hidden; cursor: default; }
+	table.jrapid_tbody { width: 100%; font-size: 11px; background-color: transparent; overflow-x:hidden;  }
+	table.jrapid_table_caption { display:none; }                   
+	table.jrapid_table thead th { color:#aec7e2;; background: #0d1825; white-space:nowrap; vertical-align:top; font-weight:normal; padding: 0px; height: 20px; overflow:hidden; font-size: 11px; text-align:left; padding: 1px 0px 1px 5px; }      
+	table.jrapid_table thead th:hover { color:#aec7e2; background: #1c2934; }
+	table.jrapid_table td { border: none; padding: 1px 0px 1px 5px; height: 17px; }          
+	tr.jrapid_table_tr__selected { background-color: #87a2b2; }
+	.listing_table { height: 250px; width: 100%; }
+		
+/* ----------------------------------------------------------------------------- */
+/* Accordeon */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.jrapid_accordeon { background-color: transparent; background-image: none; }
+	div.jrapid_accordeonitem { font: 11px "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; background:#000; border: none !important; }        
+	button.jrapid_accordeonitem_button { font: 11px "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; margin-bottom:2px; border:none !important; padding-top:1px; padding-bottom:2px; background:#060a0f !important; color:#aec7e2 !important; text-transform:uppercase; }
+	div.jrapid_accordeonitem_body { background-color: #333; background-image: none;  overflow: hidden; padding: 0px 0px 0px 0px; }
+
+/* ----------------------------------------------------------------------------- */
+/* generic */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	legend { color:#aec7e2 !important; font: 11px "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; }
+	label { font-size: 11px; }
+	input.number { width: 50px;	text-align: right; }
+	fieldset { padding: 5px 5px 5px 5px; }
+	button,	input.submit {padding: 6px 3px; margin-right:2px;}
+	button,
+	input.submit,
+	select,
+	textarea,
+	input { color:#3f76b2; font: 11px "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;  background-color:transparent !important; }
+	button:hover,
+	input.submit:hover { color:white; border: none; background-color:#000000;}
+	div.listing_actionsbar { text-align: right; }
+	button.pages_button {padding: 1px 2px; margin-right:4px;}
+	select#pageselect { margin-right:4px;}
+	option { background: #0B1118; }
+	option:hover { background: red; }
+	
+/* ----------------------------------------------------------------------------- */
+/* console */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	.jrapid_console { z-index: 100; position: absolute; right: 10px; top: 0px; }
+	#jrapid_console .green { border:none; background: #96f78e url(futuristic/load-16x16.gif) 2px 2px no-repeat; }
+	#jrapid_console .yellow { border:none; background: #fcfcb1 url(futuristic/warn-16x16.png) 4px 2px no-repeat; }
+	#jrapid_console .red { border:none; background: #ffbfbf url(futuristic/error-16x16.png)3px 2px no-repeat; }
+	.jrapid_console_message { padding: 4px 5px 3px 25px; background-image: url("futuristic/load-16x16.gif"); border: none; opacity: .92; -moz-opacity: .92; filter:alpha(opacity=92); font: .7em verdana, arial, sans-serif; }
+	.listing_table { overflow-y:scroll; height: 250px; width: 100%; }
+	table.jrapid_table { width: 100%; }
+
+/* ----------------------------------------------------------------------------- */
+/* generic - main.css */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	label.filter { color:#aec7e2 !important; }
+	#filterfieldset { border:none; margin-right:15px; }
+	body { scrollbar-3dlight-color:#000; scrollbar-arrow-color:#000; scrollbar-base-color:#000; scrollbar-darkshadow-color:#000; scrollbar-face-color:#0D1825; scrollbar-highlight-color:#000; scrollbar-shadow-color:#000 }	
+	hr, #hr { border:none; color: #111F2E; background-color: #111F2E; height: 2px; }
+	.bi_title { color:#AEC7E2 !important; font-family: "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; }
+	#form label { color:#aec7e2 !important; }
+
+/* ----------------------------------------------------------------------------- */
+/* body */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	body { background: #1d1d1d; font-family: "Andale Mono", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace }
+
+/* ----------------------------------------------------------------------------- */
+/* wrap */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div#wrap { background-image: none; background-color: transparent; }
+	
+/* ----------------------------------------------------------------------------- */
+/* header */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.header { background: #111; background-image: none; }
+	div.header_inner h1 { color:#aaa; font-size:.9em; padding-top:10px; }
+	div.header_inner h2 { color:#aaa; font-size:.8em; font-weight:normal; margin-top:4px; }
+	div.header_inner button.settings { position:absolute; right:50px; top:20px; }
+	
+/* ----------------------------------------------------------------------------- */
+/* footer */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.footer { background:#000; clear:both; margin-top:20px; padding:10px 0px; }
+	div.footer_inner { color:#ccc; font-size:.7em; margin:0px auto; width:980px;}	

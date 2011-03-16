@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN " " http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:htmli="http://www.htmli.com/ns/ui" xmlns:str="http://exslt.org/strings">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="http://js.jrapid.net/1.0nb50/jrapid/jquery-1.4.4.min.js"></script><script type="text/javascript" src="http://js.jrapid.net/1.0nb50/htmli/js/htmli.js"></script><script type="text/javascript" src="http://js.jrapid.net/1.0nb50/htmli/js/html.js"></script><script type="text/javascript" src="http://js.jrapid.net/1.0nb50/htmli/js/lib-std.js"></script><script type="text/javascript" src="http://js.jrapid.net/1.0nb50/jrapid/prd.js"></script><script type="text/javascript" src="http://js.jrapid.net/1.0nb50/jrapid/uml/jquery.masonry.min.js"></script><script type="text/javascript" src="http://js.jrapid.net/1.0nb50/jrapid/uml/uml.js"></script><script type="text/javascript" src="http://js.jrapid.net/1.0nb50/jrapid/uml/lines.js"></script>
+<link rel="stylesheet" type="text/css" href="http://js.jrapid.net/1.0nb50/jrapid/uml/umlprint.css" media="print">
+<script type="text/javascript">
+					document.writeln('<link rel="stylesheet" type="text/css" ' +
+						' href="Main_umlclassdiagram.css?' + new Date().getTime() + '"/>');				
+				</script><script type="text/javascript">
+			var entities = ['Employee','Country','State','Qualification','Interview','Course','CourseTaken','VacationRequest',''];
+			var relations = [];
+			
+			relations['Employee'] = [];
+			
+			relations['Country'] = [];
+			
+			relations['State'] = [];
+			
+			relations['Qualification'] = [];
+			
+			relations['Interview'] = [];
+			
+			relations['Course'] = [];
+			
+			relations['CourseTaken'] = [];
+			
+			relations['VacationRequest'] = [];
+			
+				relations['Employee'][relations['Employee'].length] = 'Country';				
+				relations['Country'][relations['Country'].length] = 'Employee';				
+				
+				relations['Employee'][relations['Employee'].length] = 'State';				
+				relations['State'][relations['State'].length] = 'Employee';				
+				
+				relations['Employee'][relations['Employee'].length] = 'Qualification';				
+				relations['Qualification'][relations['Qualification'].length] = 'Employee';				
+				
+				relations['Employee'][relations['Employee'].length] = 'CourseTaken';				
+				relations['CourseTaken'][relations['CourseTaken'].length] = 'Employee';				
+				
+				relations['Country'][relations['Country'].length] = 'State';				
+				relations['State'][relations['State'].length] = 'Country';				
+				
+				relations['State'][relations['State'].length] = 'Country';				
+				relations['Country'][relations['Country'].length] = 'State';				
+				
+				relations['Interview'][relations['Interview'].length] = 'Employee';				
+				relations['Employee'][relations['Employee'].length] = 'Interview';				
+				
+				relations['CourseTaken'][relations['CourseTaken'].length] = 'Course';				
+				relations['Course'][relations['Course'].length] = 'CourseTaken';				
+				
+				relations['CourseTaken'][relations['CourseTaken'].length] = 'Employee';				
+				relations['Employee'][relations['Employee'].length] = 'CourseTaken';				
+				
+				relations['VacationRequest'][relations['VacationRequest'].length] = 'Employee';				
+				relations['Employee'][relations['Employee'].length] = 'VacationRequest';				
+				</script>
+</head>
+<body onload="initLines(application.wrapNode(document.getElementById('tables')));doZoom();" htmliprefix="" class="panel">
+<div id="tables" class="tablesDiv">
+    
+    
+    
+    
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'Config',true);" ondragelement="var me=_h1(this);dragTable(me,'Config',true);" id="Config">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editConfig('');" class="boxconfig" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxconfigTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxconfigTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editConfig(); return false;"><img src="http://img.jrapid.net/img/config-16x16.png" border="0">Configuration</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'Index',true);" ondragelement="var me=_h1(this);dragTable(me,'Index',true);" id="Index">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editPanel('Index');" class="boxpanel" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxpanelTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxpanelTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editPanel('Index'); return false;"><img src="http://img.jrapid.net/img/panel-16x16.png" border="0">Index</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-exit" onclick="top.PRD.removePanel('Index'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table>
+<tbody>
+<tr>
+<td>&middot;</td><td>employees
+											: listing</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'Employee');" ondragelement="var me=_h1(this);dragTable(me,'Employee');" id="Employee">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEntity('Employee');" class="box" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEntity('Employee'); return false;"><img src="http://img.jrapid.net/img/entity-16x16.png" border="0">Employee</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-add" onmouseover="var me=_h1(this),ev=_h2(event); showAdd(me, ev, 'Employee');"><img src="../img/button-add.png" border="0" alt="add"></a><a href="#" class="button-exit" onclick="top.PRD.removeEntity('Employee'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table id="tablePropertiesEmployee">
+<tbody>
+<td>&middot;</td><td>id</td>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','thumb'); return false;" class="propertyLink">thumb</a><span>
+		&nbsp;:
+		image</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','firstName'); return false;" class="propertyLink" style="font-weight:bold;">firstName</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','lastName'); return false;" class="propertyLink" style="font-weight:bold;">lastName</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','fileNumber'); return false;" class="propertyLink">fileNumber</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','status'); return false;" class="propertyLink">status</a><span>
+		&nbsp;:
+		enum</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','email'); return false;" class="propertyLink">email</a><span>
+		&nbsp;:
+		email</span></td>
+</tr>
+</tbody>
+</table>
+<div id="morePropertiesEmployee">
+<hr>
+<table id="tableMorePropertiesEmployee">
+<tbody>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','picture'); return false;" class="propertyLink">picture</a><span>
+		&nbsp;:
+		image</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','ssn'); return false;" class="propertyLink">ssn</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','dateOfBirth'); return false;" class="propertyLink">dateOfBirth</a><span>
+		&nbsp;:
+		date</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','gender'); return false;" class="propertyLink">gender</a><span>
+		&nbsp;:
+		enum</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','phone'); return false;" class="propertyLink">phone</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','mobile'); return false;" class="propertyLink">mobile</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','maritalStatus'); return false;" class="propertyLink">maritalStatus</a><span>
+		&nbsp;:
+		enum</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','spouse'); return false;" class="propertyLink">spouse</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','children'); return false;" class="propertyLink">children</a><span>
+		&nbsp;:
+		Set&lt;string&gt;</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','address'); return false;" class="propertyLink">address</a><span>
+		&nbsp;:
+		text</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','country'); return false;" class="propertyLink">country</a><span>
+		&nbsp;:
+		Country</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','state'); return false;" class="propertyLink">state</a><span>
+		&nbsp;:
+		State</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','city'); return false;" class="propertyLink">city</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','cv'); return false;" class="propertyLink">cv</a><span>
+		&nbsp;:
+		file</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','skills'); return false;" class="propertyLink">skills</a><span>
+		&nbsp;:
+		Set&lt;string&gt;</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','qualifications'); return false;" class="propertyLink">qualifications</a><span>
+		&nbsp;:
+		Set&lt;Qualification&gt;</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Employee','coursesTaken'); return false;" class="propertyLink">coursesTaken</a><span>
+		&nbsp;:
+		Set&lt;CourseTaken&gt;</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEmbeddedListing('Employee','interviews'); return false;" class="propertyLink">interviews</a><span>
+					&nbsp;: <i>embeddedlisting</i></span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEmbeddedListing('Employee','vacations'); return false;" class="propertyLink">vacations</a><span>
+					&nbsp;: <i>embeddedlisting</i></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="listingEmployee">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">*</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editListing('Employee', 'employeesAlbum'); return false;">employeesAlbum</a><span>&nbsp;: listing</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">*</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editListing('Employee', 'employeesLeft'); return false;">employeesLeft</a><span>&nbsp;: listing</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="subsetEmployee">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">#</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editSubset('Employee', 'employees'); return false;">employees</a><span>&nbsp;: subset</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">#</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editSubset('Employee', 'former'); return false;">former</a><span>&nbsp;: subset</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">#</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editSubset('Employee', 'employee'); return false;">employee</a><span>&nbsp;: subset</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">#</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editSubset('Employee', 'candidate'); return false;">candidate</a><span>&nbsp;: subset</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">#</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editSubset('Employee', 'prospects'); return false;">prospects</a><span>&nbsp;: subset</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="filterEmployee">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">.</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editFilter('Employee', 'lastName'); return false;">lastName</a><span>&nbsp;: filter</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">.</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editFilter('Employee', 'ssnFilter'); return false;">ssnFilter</a><span>&nbsp;: filter</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">.</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editFilter('Employee', 'country'); return false;">country</a><span>&nbsp;: filter</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">.</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editFilter('Employee', 'qualificationsFilter'); return false;">qualificationsFilter</a><span>&nbsp;: filter</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">.</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editFilter('Employee', 'gender'); return false;">gender</a><span>&nbsp;: filter</span>
+<br>
+</td>
+</tr>
+<tr>
+<td width="1">.</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editFilter('Employee', 'countriesFilter'); return false;">countriesFilter</a><span>&nbsp;: filter</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'Country');" ondragelement="var me=_h1(this);dragTable(me,'Country');" id="Country">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEntity('Country');" class="box" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEntity('Country'); return false;"><img src="http://img.jrapid.net/img/entity-16x16.png" border="0">Country</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-add" onmouseover="var me=_h1(this),ev=_h2(event); showAdd(me, ev, 'Country');"><img src="../img/button-add.png" border="0" alt="add"></a><a href="#" class="button-exit" onclick="top.PRD.removeEntity('Country'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table id="tablePropertiesCountry">
+<tbody>
+<td>&middot;</td><td>id</td>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Country','name'); return false;" class="propertyLink">name</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+</tbody>
+</table>
+<div id="morePropertiesCountry">
+<hr>
+<table id="tableMorePropertiesCountry">
+<tbody>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Country','states'); return false;" class="propertyLink">states</a><span>
+		&nbsp;:
+		Set&lt;State&gt;</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'State');" ondragelement="var me=_h1(this);dragTable(me,'State');" id="State">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEntity('State');" class="box" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEntity('State'); return false;"><img src="http://img.jrapid.net/img/entity-16x16.png" border="0">State</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-add" onmouseover="var me=_h1(this),ev=_h2(event); showAdd(me, ev, 'State');"><img src="../img/button-add.png" border="0" alt="add"></a><a href="#" class="button-exit" onclick="top.PRD.removeEntity('State'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table id="tablePropertiesState">
+<tbody>
+<td>&middot;</td><td>id</td>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('State','name'); return false;" class="propertyLink">name</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+</tbody>
+</table>
+<div id="morePropertiesState">
+<hr>
+<table id="tableMorePropertiesState">
+<tbody>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('State','country'); return false;" class="propertyLink">country</a><span>
+		&nbsp;:
+		Country</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="subsetState">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">#</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editSubset('State', 'forCountry'); return false;">forCountry</a><span>&nbsp;: subset</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'Qualification');" ondragelement="var me=_h1(this);dragTable(me,'Qualification');" id="Qualification">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEntity('Qualification');" class="box" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEntity('Qualification'); return false;"><img src="http://img.jrapid.net/img/entity-16x16.png" border="0">Qualification</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-add" onmouseover="var me=_h1(this),ev=_h2(event); showAdd(me, ev, 'Qualification');"><img src="../img/button-add.png" border="0" alt="add"></a><a href="#" class="button-exit" onclick="top.PRD.removeEntity('Qualification'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table id="tablePropertiesQualification">
+<tbody>
+<td>&middot;</td><td>id</td>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Qualification','name'); return false;" class="propertyLink">name</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'Interview');" ondragelement="var me=_h1(this);dragTable(me,'Interview');" id="Interview">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEntity('Interview');" class="box" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEntity('Interview'); return false;"><img src="http://img.jrapid.net/img/entity-16x16.png" border="0">Interview</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-add" onmouseover="var me=_h1(this),ev=_h2(event); showAdd(me, ev, 'Interview');"><img src="../img/button-add.png" border="0" alt="add"></a><a href="#" class="button-exit" onclick="top.PRD.removeEntity('Interview'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table id="tablePropertiesInterview">
+<tbody>
+<td>&middot;</td><td>id</td>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Interview','employee'); return false;" class="propertyLink">employee</a><span>
+		&nbsp;:
+		Employee</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Interview','title'); return false;" class="propertyLink">title</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Interview','interviewDate'); return false;" class="propertyLink">interviewDate</a><span>
+		&nbsp;:
+		date</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Interview','start'); return false;" class="propertyLink">start</a><span>
+		&nbsp;:
+		time</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Interview','end'); return false;" class="propertyLink">end</a><span>
+		&nbsp;:
+		time</span></td>
+</tr>
+</tbody>
+</table>
+<div id="morePropertiesInterview">
+<hr>
+<table id="tableMorePropertiesInterview">
+<tbody>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Interview','allDay'); return false;" class="propertyLink">allDay</a><span>
+		&nbsp;:
+		boolean</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="listingInterview">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">*</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editListing('Interview', 'forInterviewsTab'); return false;">forInterviewsTab</a><span>&nbsp;: listing</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="subsetInterview">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">#</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editSubset('Interview', 'forEmployee'); return false;">forEmployee</a><span>&nbsp;: subset</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="defaultsetInterview">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">+</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editDefaultset('Interview', 'forEmployeeDef'); return false;">forEmployeeDef</a><span>&nbsp;: defaultset</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'Course');" ondragelement="var me=_h1(this);dragTable(me,'Course');" id="Course">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEntity('Course');" class="box" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEntity('Course'); return false;"><img src="http://img.jrapid.net/img/entity-16x16.png" border="0">Course</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-add" onmouseover="var me=_h1(this),ev=_h2(event); showAdd(me, ev, 'Course');"><img src="../img/button-add.png" border="0" alt="add"></a><a href="#" class="button-exit" onclick="top.PRD.removeEntity('Course'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table id="tablePropertiesCourse">
+<tbody>
+<td>&middot;</td><td>id</td>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Course','name'); return false;" class="propertyLink">name</a><span>
+		&nbsp;:
+		string</span></td>
+</tr>
+</tbody>
+</table>
+<div id="morePropertiesCourse">
+<hr>
+<table id="tableMorePropertiesCourse">
+<tbody>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Course','description'); return false;" class="propertyLink">description</a><span>
+		&nbsp;:
+		text</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('Course','duration'); return false;" class="propertyLink">duration</a><span>
+		&nbsp;:
+		integer</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'CourseTaken');" ondragelement="var me=_h1(this);dragTable(me,'CourseTaken');" id="CourseTaken">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEntity('CourseTaken');" class="box" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEntity('CourseTaken'); return false;"><img src="http://img.jrapid.net/img/entity-16x16.png" border="0">CourseTaken</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-add" onmouseover="var me=_h1(this),ev=_h2(event); showAdd(me, ev, 'CourseTaken');"><img src="../img/button-add.png" border="0" alt="add"></a><a href="#" class="button-exit" onclick="top.PRD.removeEntity('CourseTaken'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table id="tablePropertiesCourseTaken">
+<tbody>
+<td>&middot;</td><td>id</td>
+</tbody>
+</table>
+<div id="morePropertiesCourseTaken">
+<hr>
+<table id="tableMorePropertiesCourseTaken">
+<tbody>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('CourseTaken','course'); return false;" class="propertyLink">course</a><span>
+		&nbsp;:
+		Course</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('CourseTaken','employee'); return false;" class="propertyLink">employee</a><span>
+		&nbsp;:
+		Employee</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('CourseTaken','completed'); return false;" class="propertyLink">completed</a><span>
+		&nbsp;:
+		boolean</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'VacationRequest');" ondragelement="var me=_h1(this);dragTable(me,'VacationRequest');" id="VacationRequest">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEntity('VacationRequest');" class="box" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEntity('VacationRequest'); return false;"><img src="http://img.jrapid.net/img/entity-16x16.png" border="0">VacationRequest</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-add" onmouseover="var me=_h1(this),ev=_h2(event); showAdd(me, ev, 'VacationRequest');"><img src="../img/button-add.png" border="0" alt="add"></a><a href="#" class="button-exit" onclick="top.PRD.removeEntity('VacationRequest'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table id="tablePropertiesVacationRequest">
+<tbody>
+<td>&middot;</td><td>id</td>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('VacationRequest','emplyee'); return false;" class="propertyLink">emplyee</a><span>
+		&nbsp;:
+		Employee</span></td>
+</tr>
+</tbody>
+</table>
+<div id="morePropertiesVacationRequest">
+<hr>
+<table id="tableMorePropertiesVacationRequest">
+<tbody>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('VacationRequest','fromDate'); return false;" class="propertyLink">fromDate</a><span>
+		&nbsp;:
+		date</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('VacationRequest','toDate'); return false;" class="propertyLink">toDate</a><span>
+		&nbsp;:
+		date</span></td>
+</tr>
+<tr>
+<td>&middot;</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editProperty('VacationRequest','granted'); return false;" class="propertyLink">granted</a><span>
+		&nbsp;:
+		boolean</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="subsetVacationRequest">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">#</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editSubset('VacationRequest', 'forEmployee'); return false;">forEmployee</a><span>&nbsp;: subset</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div xstyle="display:none;" id="defaultsetVacationRequest">
+<table width="100%">
+<thead>
+<tr>
+<td align="center" colspan="2">
+<hr>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="1">+</td><td><a href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editDefaultset('VacationRequest', 'forEmployeeDef'); return false;">forEmployeeDef</a><span>&nbsp;: defaultset</span>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'MaritalStatus',true);" ondragelement="var me=_h1(this);dragTable(me,'MaritalStatus', true);" id="MaritalStatus">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEnumset('MaritalStatus');" class="boxenumset" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxenumsetTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxenumsetTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEnumset('MaritalStatus'); return false;"><img src="http://img.jrapid.net/img/enumset-16x16.png" border="0">MaritalStatus</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-exit" onclick="top.PRD.removePanel('MaritalStatus'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'Gender',true);" ondragelement="var me=_h1(this);dragTable(me,'Gender', true);" id="Gender">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEnumset('Gender');" class="boxenumset" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxenumsetTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxenumsetTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEnumset('Gender'); return false;"><img src="http://img.jrapid.net/img/enumset-16x16.png" border="0">Gender</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-exit" onclick="top.PRD.removePanel('Gender'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+    
+<div onmousedown="var me=_h1(this),ev=_h2(event);me.start(ev.getClientX(), ev.getClientY(), ev);" onmousemove="return false;" htmliclass="com_htmli_ui_DragAndDrop" class="com_htmli_ui_DragAndDrop " style="position: absolute;" ondropelement="var me=_h1(this);dropTable(me,'EmployeeStatus',true);" ondragelement="var me=_h1(this);dragTable(me,'EmployeeStatus', true);" id="EmployeeStatus">
+<div class="boxShadow">
+<div class="boxLayer">
+<table border="0" ondblclick="top.PRD.editEnumset('EmployeeStatus');" class="boxenumset" cellspacing="0" cellpadding="2">
+<tr>
+<td width="180" class="boxenumsetTitle">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%"><a class="boxenumsetTitle" href="#" onmousedown="var ev=_h2(event);ev.stopPropagation();" onclick="top.PRD.editEnumset('EmployeeStatus'); return false;"><img src="http://img.jrapid.net/img/enumset-16x16.png" border="0">EmployeeStatus</a></td><td nowrap style="font-weight: normal;"><a href="#" class="button-exit" onclick="top.PRD.removePanel('EmployeeStatus'); return false;" onmousedown="var ev=_h2(event);ev.stopPropagation();"><img src="../img/button-exit.png" border="0" alt="remove"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div id="addContainer" style="display:none;">
+<ul class="addList">
+<li class="optionProperty">
+<a href="#" onclick="top.PRD.editProperty(entityName); return false;" title="Properties hold all the information for the entities and their relations with other entities.">Property</a>
+</li>
+<li class="optionListing">
+<a href="#" onclick="top.PRD.editListing(entityName); return false;" title="Listings are the way of showing the existing instances of an entity in the database.">Listing</a>
+</li>
+<li class="optionSubset">
+<a href="#" onclick="top.PRD.editSubset(entityName); return false;" title="A subset is a restricted collection of instances (records) of an entity.">Subset</a>
+</li>
+<li class="optionAction">
+<a href="#" onclick="top.PRD.editAction(entityName); return false;" title="Actions link entities and properties to elements of the system: other entities, listings, JavaScript calls, reports, etc.">Action</a>
+</li>
+<li class="optionFilter">
+<a href="#" onclick="top.PRD.editFilter(entityName); return false;" title="Filters let end users specify restrictions to listings (selection).">Filter</a>
+</li>
+<li class="optionDefaultSet">
+<a href="#" onclick="top.PRD.editDefaultset(entityName); return false;" title="Defaultsets assign a set of default values when creating an entity.">Defaultset</a>
+</li>
+<li class="optionEmbeddedListing">
+<a href="#" onclick="top.PRD.editEmbeddedListing(entityName); return false;" title="An entity may include another entity's listing.">Embedded Listing</a>
+</li>
+</ul>
+</div>
+<div id="addTransientContainer" style="display:none;">
+<ul class="addList">
+<li class="optionProperty">
+<a href="#" onclick="top.PRD.editProperty(entityName); return false;" title="A property is a piece of data that the entity has or a relationship to another entity.">Property</a>
+</li>
+<li class="optionAction">
+<a href="#" onclick="top.PRD.editAction(entityName); return false;" title="An action adds functionality to the entity and relates it to others.">Action</a>
+</li>
+<li class="optionDefaultSet">
+<a href="#" onclick="top.PRD.editDefaultset(entityName); return false;" title="A defaultset is a set of default values of the entity.">Default Set</a>
+</li>
+<li class="optionEmbeddedListing">
+<a href="#" onclick="top.PRD.editEmbeddedListing(entityName); return false;" title="An entity may include another entity's listing.">Embedded Listing</a>
+</li>
+</ul>
+</div>
+<div id="line" class="line">
+<input type="hidden" id="styleFile" value="Main_umlclassdiagram.css">
+</div>
+</div>
+</body>
+</html>

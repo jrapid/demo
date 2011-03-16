@@ -1,0 +1,25 @@
+/* ----------------------------------------------------------------------------- */
+/* Menu Horizontal */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.menucontainer{ floa:left; display:block; margin:0px 0 10px 0; overflow:hiddenx; }
+	ul.menubar { height: 25px; list-style:none; margin-left 0; padding:0; }
+	ul.menubar li { float:left; margin:0; position:relative; }
+	ul.menubar li li { display:block; float:none; margin:0; list-style:none; }
+	ul.menubar li a { display:block; min-height:16px; padding: 6px 15px 0px 10px; width:100%; }
+	ul.menubar li li a { display:block; text-decoration:none; width:135px; padding-bottom: 5px; }
+	ul.menubar li li a:hover { position:relative; }
+	ul.menu { list-style: none; display:none; position: absolute; top:23px; left:0px; margin:-1px 0 5px; z-index:900; }
+	li.menubaritem:hover ul.menu { display: block !important; }
+
+/* ----------------------------------------------------------------------------- */
+/* Header */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.header { height:58px;/*84px;*/ margin-bottom:0px; display:block; position:relative; z-index:1; }
+	div.header_inner { display:block; margin:0px auto; position:relative; width:980px; }
+
+/* ----------------------------------------------------------------------------- */
+/* Container */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	/*div.container { width: 980px; margin: -26px auto 0 auto !important; position:relative; z-index:1; overflow:visible; }*/
+	div.container { margin: 0px auto !important; overflow:visible; position:relative; width: 980px; }
+	div#panel { margin-top:15px; }

@@ -1,0 +1,41 @@
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */           
+	div.listing_table table.jrapid_table { 
+	background:white url(listing/texture/texture-paper-jrapid_table.jpg) center top no-repeat;
+	border:none;
+	}
+	table.jrapid_table tbody.jrapid_tbody { 
+	background-color: transparent;
+	background-image: none;	 	
+	border:none;
+	}
+	table.jrapid_table thead th { 
+	background-color:#333;
+	background-image:none;
+	border:none; 
+	border-bottom:1px solid #111;
+	color:#eee;
+	padding:4px 3px;
+	text-transform:uppercase;
+	}
+	table.jrapid_table thead th:hover { 
+	background:#000 url(listing/texture/texture-paper-thead-th-hover.png) left top repeat-x;
+	color:#fff;
+	}
+	table.jrapid_table tr:hover td { 
+	background-color: #fffdc4; 
+	background-image:none;
+	}
+	table.jrapid_table td { 
+	background-color: transparent;
+	background-image: none;	 	
+	border:none;
+	border-bottom:1px solid #ccc;
+	padding:6px 3px;
+	}
+	tr.jrapid_table_tr__selected { 
+	background-color:transparent !important;
+	background:url(listing/texture/texture-paper-jrapid_table_tr__selected.png) left top repeat;
+	color: #000000 !important; 
+	}  	

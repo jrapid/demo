@@ -1,0 +1,42 @@
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */           
+	div.listing_table table.jrapid_table { 
+	background:white url(listing/texture/texture-jrapid_table.jpg) center top repeat;
+	border:none;
+	}
+	table.jrapid_table tbody.jrapid_tbody { 
+	background-color: transparent;
+	background-image: none;	 	
+	border:none;
+	}
+	table.jrapid_table thead th { 
+	background:#333;
+	background:url(listing/texture/texture-thead-th-hover.jpg) left top repeat;
+	border:none; 
+	border-bottom:1px solid #111;
+	color:#eee;
+	padding:4px 3px;
+	text-transform:uppercase;
+	}
+	table.jrapid_table thead th:hover { 
+	background:#000 /*url(listing/texture/texture-thead-th-hover.png) left top repeat-x*/;
+	color:#fff;
+	}
+	table.jrapid_table tr:hover td { 
+	background-color:#fffebb; 
+	background:url(listing/texture/texture-thead-tr-hover-td.jpg) left top repeat;
+	}
+	table.jrapid_table td { 
+	background-color: transparent;
+	background-image: none;	 	
+	border:none;
+	border-bottom:1px solid #fff;
+	padding:6px 3px;
+	}
+	tr.jrapid_table_tr__selected { 
+	background-color:transparent !important;
+	/*background:url(listing/texture/texture-jrapid_table_tr__selected.png) left top repeat;*/
+	background:url(listing/texture/texture-jrapid_table_tr__selected-2.jpg) left top repeat;
+	color: #000000 !important; 
+	}  	

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN " " http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:exsl="http://exslt.org/common" xmlns:forms="http://www.htmli.com/ns/forms" xmlns:xslt="http://www.htmli.com/xslt" xmlns:java="http://xml.apache.org/xalan/java" xmlns:xalan="http://xml.apache.org/xalan" xmlns:htmli="http://www.htmli.com/ns/ui" xmlns:j="http://www.htmli.com/jhtmli" xmlns:str="http://exslt.org/strings" xmlns:jrapid="http://www.jrapid.com/tld" xmlns:jhtmli="http://www.htmli.com/jhtmli">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+        <title>Employee</title>
+    </head>
+    <body onload="jrapid.listingOnLoad( 'Employee', 'employees', 'Employee' );" class="jrapid">
+        <script type="text/javascript" src="../jrapid-runtime/jrapid-tags.js?v=1.0nb50">/**/</script>
+        <script type="text/javascript" src="../jrapid-runtime/jrapid-runtime.js?v=1.0nb50">/**/</script>
+        <script type="text/javascript">
+					jrapid.experience('../jrapid-runtime', 
+						'flash', 
+						'web', 
+						'', 
+						'default'
+					);
+				</script>
+        <script type="text/javascript">
+			 		if (!window.currentContainer) { window.currentContainer = application; }
+			 	</script>
+        <link href="../jrapid-runtime/css/ui-lightness/jquery-ui-1.8rc2.custom.css" type="text/css" rel="stylesheet"/>
+        <link href="../Main/css/Main.css" type="text/css" rel="stylesheet"/>
+        <link href="../Main/css/Employee_employeesAlbum_list.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="../jrapid-runtime/jquery-1.4.2.min.js">/**/</script>
+        <script type="text/javascript" src="../jrapid-runtime/jquery-ui-1.8rc2.custom.min.js">/**/</script>
+        <div id="maindiv" class="maindiv" listing="Employee@employeesAlbum"> <!-- Filters -->
+            <fieldset class="listing" id="filterfieldset">
+                <legend>
+                    <span id="saveFilterLink">Filters</span>
+                </legend>
+                <table cellpadding="1" cellspacing="1" class="filters">
+                    <tr>
+                        <td nowrap="nowrap" filter="Employee@lastName">
+                            <label class="filter">Last Name</label>
+                            <input title="Last Name. " src="xml" selectexpr="evaluated('/lastName', me)" id="_lastName" value="" class=" text jrapid_input " type="text" onkeyup="jrapid.filter( 'lastName', this.value, jrapid.wrap(this) ); return false;"/>
+                        </td>
+                        <td nowrap="nowrap" filter="Employee@ssnFilter">
+                            <label class="filter">SSN</label>
+                            <input title="SSN. " src="xml" selectexpr="evaluated('/ssn', me)" id="_ssn" value="" class=" text jrapid_input " type="text" onkeyup="jrapid.filter( 'ssnFilter', this.value, jrapid.wrap(this) ); return false;"/>
+                        </td>
+                        <td nowrap="nowrap" filter="Employee@gender">
+                            <label class="filter">Gender</label>
+                            <select title="Gender. " src="xml" selectexpr="evaluated('/gender', me)" id="_gender" class=" enum  jrapid_select" onchange="jrapid.filter( 'gender', this.value, jrapid.wrap(this) ); return false;">
+                                <option value=""/>
+                                <option value="M" id="_gender_M">Male</option>
+                                <option value="F" id="_gender_F">Female</option>
+                            </select>
+                        </td>
+                        <td nowrap="nowrap" filter="Employee@country">
+                            <label class="filter">Country</label>
+                            <div class="jrapid_xsl" id="filtersxsl_Employee_country" url="../xml/Country" auto="auto">
+                                <div htmliinner="true">.</div>
+                                <textarea rows="10" cols="100" style="display:none;">
+                                    <select src="xml" class="jrapid_select" selectexpr="evaluated('/country/@id', me);" id="_country" title="Country. " onchange="jrapid.filter( 'country', this.value, jrapid.wrap(this) ); return false;">
+                                        <option value="0"/>
+                                        <xslt:variable name="currentvaluecountry0" select="/country/@id"/>
+                                        <xslt:for-each select="/page/country">
+                                            <option value="{ @id }">
+                                                <xslt:if test="@id = $currentvaluecountry0">
+                                                    <xslt:attribute name="selected">selected</xslt:attribute>
+                                                </xslt:if>
+                                                <xslt:value-of select="concat(name, ' ')"/>
+                                            </option>
+                                        </xslt:for-each>
+                                    </select>
+                                </textarea>
+                            </div>
+                            <script type="text/javascript" id="filtersxsl_country_script">
+					
+					window.currentContainer.getElementById(
+						'filtersxsl_Employee_country'
+					).refresh(null, true);
+				</script>
+                        </td>
+                        <td/>
+                    </tr>
+                </table>
+            </fieldset> <!-- Tabs -->
+            <div class="jrapid_views"> <!-- tab headings -->
+                <ul class="jrapid_tabpane" id="tabpane">
+                    <li class="active">
+                        <a href="#" onclick="jrapid.showTab(this); jrapid.listingTabClick(this, 'Employee'); return false;">
+                            <b>employees</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="jrapid.showTab(this); jrapid.listingTabClick(this, 'Employee'); return false;">
+                            <b>prospects</b>
+                        </a>
+                    </li>
+                </ul>
+                <div caption="employees" class="jrapid_tab">
+                    <div class="jrapid_xsl" id="xsl_1_1" url="../xml/Employee/employees" baseurl="../xml/Employee/employees" style="display: none;" onrefresh="jrapid.resizeTable(jrapid.wrap(this));" params="jrapid_url">
+                        <div htmliinner="true">.</div>
+                        <textarea rows="10" cols="100" style="display:none;">
+                            <div id="table_1_1" style="overflow-y: scroll;" class="listing_thumbnails">
+                                <xslt:for-each select="/*/*">
+                                    <table cellpadding="0" cellspacing="0" class="listing_thumbnails" id="thumbnails_1_1" rowid="{@id}" onclick="jrapid.listingToggleThumbnail(this); jrapid.listingClicked(this, '{@id}');" onmouseover="jrapid.listingMouseOverThumbnail(this);" onmouseout="jrapid.listingMouseOutThumbnail(this);">
+                                        <tbody>
+                                            <tr style="{@style}" align="center">
+                                                <td>
+                                                    <xslt:if test="boolean(thumb) and string-length(thumb) &gt; 0">
+                                                        <img src="{$jrapid_url}upload/{ thumb }" class="listing_thumbnails_img" id="listing_thumbnails_img"/>
+                                                    </xslt:if>
+                                                    <xslt:if test="not(boolean(thumb) and string-length(thumb) &gt; 0)">
+                                                        <img src="../jrapid-runtime/img/nopicture.gif" class="listing_thumbnails_img" id="listing_thumbnails_img"/>
+                                                    </xslt:if>
+                                                    <div style="display: none; position: absolute;">
+                                                        <div class="listing_thumbnails_more">
+                                                            <b>
+                                                                <a href="#" id="thumbnails_more_1_1" rowid="{ @id }" onclick="jrapid.form( {{ obj: jrapid.wrap(this), entity: 'Employee', canvas: 'formcanvas', module: 'Main', id: '{@id}' }} ); return false;"><span>
+                                                                    <xslt:value-of select="firstName"/></span> <span>
+                                                                    <xslt:value-of select="lastName"/></span> </a>
+                                                            </b>
+                                                            <br/><span>
+                                                            <xslt:value-of select="email"/></span> </div>
+                                                    </div>
+                                                    <div class="listing_thumbnails_label">
+                                                        <a href="#" id="thumbnails_label_1_1" rowid="{@id}" onclick="jrapid.form( {{ obj: jrapid.wrap(this), entity: 'Employee', canvas: 'formcanvas', module: 'Main', id: '{@id}' }} ); return false;"><span>
+                                                            <xslt:value-of select="firstName"/></span> <span>
+                                                            <xslt:value-of select="lastName"/></span> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </xslt:for-each>
+                            </div>
+                            <div id="pagebar">
+                                <xslt:if test="not(/page/@rows = 0)">
+                                    <button onclick="jrapid.page(this, 1, '{/page/@total}', true);" class="pages_button">|&amp;lt;</button>
+                                    <button onclick="me=jrapid.wrap(this);jrapid.page(this, parseInt(me.getNextElementSibling().getValue())-1, '{/page/@total}');" class="pages_button">&amp;lt;</button>
+                                    <select onchange="jrapid.page(this, this.value, '{/page/@total}');" style="width: 40px;" onmouseover="jrapid.pageList(this, '{/page/@page}', '{/page/@total}');" id="pageselect">
+                                        <option value="{/page/@page}" selected="selected">
+                                            <xslt:value-of select="/page/@page"/>
+                                        </option>
+                                    </select>
+                                    <button onclick="me=jrapid.wrap(this);jrapid.page(this, parseInt(me.getPreviousSibling().getValue())+1, '{/page/@total}');" class="pages_button">&amp;gt;</button>
+                                    <button onclick="jrapid.page(this, parseInt('{/page/@total}'), '{/page/@total}');" class="pages_button">&amp;gt;|</button>
+                                </xslt:if>
+                                <xslt:choose>
+                                    <xslt:when test="/page/@rows = 0">
+                                        <label>No results found.</label>
+                                    </xslt:when>
+                                    <xslt:otherwise>
+                                        <label>Showing <b>
+                                                <xslt:value-of select="((/page/@page)-1) * 50 + 1"/>
+                                            </b> to 
+					<xslt:choose>
+                                                <xslt:when test="/page/@page = /page/@total or /page/@rows = 0">
+                                                    <b>
+                                                        <xslt:value-of select="/page/@rows"/>
+                                                    </b>
+                                                </xslt:when>
+                                                <xslt:otherwise>
+                                                    <b>
+                                                        <xslt:value-of select="((/page/@page)) * 50"/>
+                                                    </b>
+                                                </xslt:otherwise>
+                                            </xslt:choose>
+					 of <b>
+                                                <xslt:value-of select="concat(' ', /page/@rows, ' ')"/>
+                                            </b>
+                                        </label>
+                                    </xslt:otherwise>
+                                </xslt:choose>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+                <div caption="prospects" class="jrapid_tab" style="display: none;">
+                    <div class="jrapid_xsl" id="xsl_1_2" url="../xml/Employee/prospects" baseurl="../xml/Employee/prospects" style="display: none;" onrefresh="jrapid.resizeTable(jrapid.wrap(this));" params="jrapid_url">
+                        <div htmliinner="true">.</div>
+                        <textarea rows="10" cols="100" style="display:none;">
+                            <div id="table_1_2" style="overflow-y: scroll;" class="listing_thumbnails">
+                                <xslt:for-each select="/*/*">
+                                    <table cellpadding="0" cellspacing="0" class="listing_thumbnails" id="thumbnails_1_2" rowid="{@id}" onclick="jrapid.listingToggleThumbnail(this); jrapid.listingClicked(this, '{@id}');" onmouseover="jrapid.listingMouseOverThumbnail(this);" onmouseout="jrapid.listingMouseOutThumbnail(this);">
+                                        <tbody>
+                                            <tr style="{@style}" align="center">
+                                                <td>
+                                                    <xslt:if test="boolean(thumb) and string-length(thumb) &gt; 0">
+                                                        <img src="{$jrapid_url}upload/{ thumb }" class="listing_thumbnails_img" id="listing_thumbnails_img"/>
+                                                    </xslt:if>
+                                                    <xslt:if test="not(boolean(thumb) and string-length(thumb) &gt; 0)">
+                                                        <img src="../jrapid-runtime/img/nopicture.gif" class="listing_thumbnails_img" id="listing_thumbnails_img"/>
+                                                    </xslt:if>
+                                                    <div style="display: none; position: absolute;">
+                                                        <div class="listing_thumbnails_more">
+                                                            <b>
+                                                                <a href="#" id="thumbnails_more_1_2" rowid="{ @id }" onclick="jrapid.form( {{ obj: jrapid.wrap(this), entity: 'Employee', canvas: 'formcanvas', module: 'Main', id: '{@id}' }} ); return false;"><span>
+                                                                    <xslt:value-of select="firstName"/></span> <span>
+                                                                    <xslt:value-of select="lastName"/></span> </a>
+                                                            </b>
+                                                            <br/><span>
+                                                            <xslt:value-of select="email"/></span> </div>
+                                                    </div>
+                                                    <div class="listing_thumbnails_label">
+                                                        <a href="#" id="thumbnails_label_1_2" rowid="{@id}" onclick="jrapid.form( {{ obj: jrapid.wrap(this), entity: 'Employee', canvas: 'formcanvas', module: 'Main', id: '{@id}' }} ); return false;"><span>
+                                                            <xslt:value-of select="firstName"/></span> <span>
+                                                            <xslt:value-of select="lastName"/></span> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </xslt:for-each>
+                            </div>
+                            <div id="pagebar">
+                                <xslt:if test="not(/page/@rows = 0)">
+                                    <button onclick="jrapid.page(this, 1, '{/page/@total}', true);" class="pages_button">|&amp;lt;</button>
+                                    <button onclick="me=jrapid.wrap(this);jrapid.page(this, parseInt(me.getNextElementSibling().getValue())-1, '{/page/@total}');" class="pages_button">&amp;lt;</button>
+                                    <select onchange="jrapid.page(this, this.value, '{/page/@total}');" style="width: 40px;" onmouseover="jrapid.pageList(this, '{/page/@page}', '{/page/@total}');" id="pageselect">
+                                        <option value="{/page/@page}" selected="selected">
+                                            <xslt:value-of select="/page/@page"/>
+                                        </option>
+                                    </select>
+                                    <button onclick="me=jrapid.wrap(this);jrapid.page(this, parseInt(me.getPreviousSibling().getValue())+1, '{/page/@total}');" class="pages_button">&amp;gt;</button>
+                                    <button onclick="jrapid.page(this, parseInt('{/page/@total}'), '{/page/@total}');" class="pages_button">&amp;gt;|</button>
+                                </xslt:if>
+                                <xslt:choose>
+                                    <xslt:when test="/page/@rows = 0">
+                                        <label>No results found.</label>
+                                    </xslt:when>
+                                    <xslt:otherwise>
+                                        <label>Showing <b>
+                                                <xslt:value-of select="((/page/@page)-1) * 50 + 1"/>
+                                            </b> to 
+					<xslt:choose>
+                                                <xslt:when test="/page/@page = /page/@total or /page/@rows = 0">
+                                                    <b>
+                                                        <xslt:value-of select="/page/@rows"/>
+                                                    </b>
+                                                </xslt:when>
+                                                <xslt:otherwise>
+                                                    <b>
+                                                        <xslt:value-of select="((/page/@page)) * 50"/>
+                                                    </b>
+                                                </xslt:otherwise>
+                                            </xslt:choose>
+					 of <b>
+                                                <xslt:value-of select="concat(' ', /page/@rows, ' ')"/>
+                                            </b>
+                                        </label>
+                                    </xslt:otherwise>
+                                </xslt:choose>
+                            </div>
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="listing_actionsbar" id="actionbar">
+                <select onchange="jrapid.listingChangeView(this);" class="listing_selectaction" id="selectview" style="display: none;">
+                    <option value="thumbnails">thumbnails</option>
+                </select>
+                <button id="add" onclick="jrapid.openFormFromListing( { actionSrc: this, entity: 'Employee', canvas: 'formcanvas', defaultset: this.getAttribute('defaultset'), defaultsetparams: this.getAttribute('defaultsetparams'), module: 'Main' } ); return false;">Add</button>
+                <button id="remove" onclick="jrapid.listingRemove(this, 'Employee'); return false;">Remove</button>
+            </div>
+        </div>
+    </body>
+</html>

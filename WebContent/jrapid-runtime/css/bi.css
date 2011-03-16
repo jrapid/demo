@@ -1,0 +1,98 @@
+/* bi.css */
+
+/* ----------------------------------------------------------------------------- */
+/* BI - Table  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+	table.bi_ct td { border: 1px solid #cfe2f1; }
+	table.bi_ct td,table.bi_ct th { padding: 5px; }
+	table.bi_ct thead th { border-left: 1px solid #bbcfe8; color: #546f96; text-align: center; font-weight: normal; padding: 4px 0; background: #bccfe9 url('images/views.png') left top repeat-x !important; font-size: .9em; }
+	table.bi_ct tbody th { text-align: center; font-weight: bold; background: #e7eef4 url('images/tbody-th.jpg') left top repeat-x; }
+	table.bi_ct thead th a.bi_ctorder { text-decoration: none; color: #546f96; font-weight: bold; }
+	table.bi_ct tbody tr.odd { -moz-background-clip: border; -moz-background-inline-policy: continuous; -moz-background-origin: padding; background: #F7F9FC none repeat scroll 0 0; }
+	table.bi_ct th.bi_ctemptyrow { background-color:  !important; background-image: none !important; }
+	.bi_tablehead { background: #bccfe9 url('images/views.png') left top repeat-x !important; border-left: 1px solid #bbcfe8; color: #546f96; text-align: left; font-size: .9em; font-weight: normal; padding: 3px 5px 3px 10px; }
+	.bi_tableheadrows { background-color: #fff; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-bottom: 1px solid #aca899; border-right: 1px solid #aca899; }
+	.bi_table { border: 1px solid #CFE2F1; border-collapse: collapse; color: #363636; font-family: tahoma, verdana, arial, helvetica, sans-serif; font-size: 11px; width: 100%; border-left: 0px solid #aca899; padding: 2px 2px 2px 2px; }
+	.bi_tr { background-color: #ffffff; }
+	.bi_trselected { background-color: #fff; }
+	.bi_trselectedlink { background-color: #e8eff7; cursor: hand; }
+	.bi_td { white-space: nowrap; padding: 5px 5px 5px 10px; border: 1px solid #CFE2F1; }
+	.bi_group { padding-top: 8px; }
+	.bi_number { text-align: right; }
+	.bi_separator {	background-color: white; border-right: 1px solid #aca899; width: 40px; }
+	.bi_title {	color: #032367; font-family: Tahoma; }
+	span.bi_title {	font-size: 12px; font-weight: bold; padding-right: 5px; margin-top: 5px; }
+	small.bi_title { font-size: 11px; margin-bottom: 15px; }
+	select.bi_title { font-size: 11px; margin: 0px !important; }
+	a.bi_title { text-decoration: none; color: black; }
+	h2.bi_title { color: #032367; font-family: Tahoma; font-size: 13px; }
+	h3.bi_title { color: #0043CF; font-family: Tahoma; font-size: 11px; }
+	a.bi_a { text-decoration: none; color: #333333; }
+	a.bi_a:hover { text-decoration: underline; color: #111111; }
+
+/* ----------------------------------------------------------------------------- */
+/* BI - Crosstab  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	table.bi_ct { border-collapse: collapse; border: 1px solid #cfe2f1; color: #363636; font: normal 11px tahoma, verdana, arial, helvetica, sans-serif; padding: 0px;  }
+	td.bi_cthead { border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-bottom: 1px solid #aca899; border-right: 1px solid #aca899; text-align: center; }
+	td.bi_ctheadleft { text-align: center; }
+	td.bi_ctheadright {	border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #aca899; border-bottom: 1px solid #aca899; text-align: center; }
+	td.bi_ctright { background-color: transparent; border-right: 1px solid #aca899; }
+	td.bi_cttitlefirst { border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #aca899; background-color: #efefef; }
+	td.bi_cttitlecols { border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #aca899; border-bottom: 1px solid #aca899; background-color: #efefef; text-align: center; }
+	td.bi_cttitleempty { border-left: 1px solid #ffffff; border-right: 1px solid #aca899; background-color: #efefef;}
+	td.bi_cttitle { text-align: center; border-left: 1px solid #ffffff; border-right: 1px solid #aca899; border-bottom: 1px solid #aca899; background-color: #efefef; }
+	td.bi_ctrow { border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #aca899; }
+	td.bi_ctemptyrow { background-color: #fff; border-right: 1px solid #aca899; }
+	td.bi_ct { border-bottom: 1px solid #aca899; border-right: 1px solid #aca899; }
+	a.bi_ct { text-decoration: none; color: #333333; }
+	a.bi_ct:hover { text-decoration: underline; color: #111111; }
+	div.bi_ctrotateup {	float: left; cursor: hand; background-image: url('icon/rotatedown.png'); width: 16px; height: 16px; text-indent: -999em; }
+	div.bi_ctrotatedown, 
+	div.bi_ctexclude, 
+	div.bi_ctswapvert { text-indent: -999em; overflow: hidden;}
+	* html>body div.bi_ctrotatedown,
+	* html>body div.bi_ctexclude, 
+	* html>body div.bi_ctswapvert { letter-spacing: -999em; }
+	div.bi_ctrotatedown {float: left; cursor: hand; background-image: url('icon/rotatedown.png'); height:18px; width:16px; }
+	div.bi_ctexclude { background-image: url('icon/exclude.png'); cursor: hand; float: left; height:18px; width: 16px; }
+	div.bi_ctswapvert { background-image: url('icon/swapvert.png'); cursor: hand; float: left; height: 18px; width: 16px; }
+	div.bi_ctswap { background-image: url('icon/swapvert.png'); cursor: hand; float: left; height: 16px; text-indent: -999em; width: 16px; }
+	div.bi_ctmenu { float: left; cursor: hand; background-image: url('icon/menu.gif'); width: 16px; height: 16px; }
+	div.bi_ctmenudiv { background-color: #ffffff; border: 1px solid #aca899; padding: 2px 2px 2px 2px; }
+	a.bi_ctmenuoption { padding: 4px 10px 4px 10px; border-bottom: 1px dashed #aca899; }
+	a.bi_ctorder { text-decoration: underline; color: #111111; }
+	div.bi_controlbar { font-family: Tahoma; font-size: 11px; padding: 5px 5px 5px 5px; background-color: #888888; color: #ffffff; }
+	a.bi_controlbaritem { color: #ffffff; }
+	div.bi_included { font-family: tahoma; font-size: 10px; padding-bottom: 20px; }
+	div.bi_footer { font-family: tahoma; font-size: 10px; padding-top: 10px; }
+	div.bi_tabletitle { font-family: verdana; font-size: 12px; font-weight: bold; text-align: center; }
+	div.bi_itemtitle { font-family: tahoma, verdana; font-size: 12px; font-weight: bold; text-align: left; background-color: #eeeeee; padding: 5px 5px 5px 5px; margin: 20px 0px 20px 0px; }
+	div.bi_tableheader { font-family: tahoma, verdana; font-size: 11px; font-weight: bold; }
+	div.bi_tablebody { font-family: tahoma, verdana; font-size: 11px; }
+
+/* ----------------------------------------------------------------------------- */
+/* BI - headerContent  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	#container div.headerContent { background: #a2bce1 url('images/thead-th-2.jpg') left top repeat-x !important; border: 1px solid #c9d8ed; color: #546f96; font-weight: normal;  margin: 0 0 6px 0 !important; overflow: hidden; padding: 0px; }
+	#container div.headerContent span.bi_title { color: #546f96; font-weight: boldl; padding: 0px 10px 10px 10px !important; }
+	li span.bi_title { color: #546f96; font-weight: boldl; padding: 220px 10px 10px 10px !important; }
+	#container div.headerContent ul.headerNavegation { text-align: left; list-style: none; margin: 0; padding: 2px; float: left; height: 27px; overflow: hidden; }
+	#container div.headerContent ul.headerNavegation  li { float: left; display: block; margin: 6px 2px 0 2px; padding: 0 4px 0 0; }
+	#container div.headerContent ul.headerNavegation li a { display: block; width: auto; padding: 0px 0px 0px 0px; color: #333; text-decoration: none; font: 11px tahoma, verdana, georgia, serif; float: left; margin-top: -5px; }
+	#container div.headerContent ul.headerNavegation li a b { font-weight: normal; display: block; float: left; margin-right: 4px; padding-left: 3px; }
+	#container div.headerContent ul.headerNavegation li a span { display: block; padding: 5px 3px 5px 3px; }
+	#container div.headerContent ul.headerNavegation li a:hover { background: url(images/layout-views-navegation-li-hover-b.png) right -22px no-repeat; cursor: pointer; }
+	#container div.headerContent ul.headerNavegation li a:hover b { background: url(images/layout-views-navegation-li-hover.png) left -22px no-repeat; cursor: pointer; }
+	/* activo a */
+	#container div.headerContent ul.headerNavegation li.activo a,
+	#container div.headerContent ul.headerNavegation li.activo a:link,
+	#container div.headerContent ul.headerNavegation li.activo a:hover,
+	#container div.headerContent ul.headerNavegation li.activo a:active { background: url(images/layout-views-navegation-li-hover-b.png) right 0px no-repeat; cursor: default; text-decoration: none; }
+	/* activo a b */
+	#container div.headerContent ul.headerNavegation li.activo a b,
+	#container div.headerContent ul.headerNavegation li.activo a:link b,
+	#container div.headerContent ul.headerNavegation li.activo a:hover b,
+	#container div.headerContent ul.headerNavegation li.activo a:active b { background: url(images/layout-views-navegation-li-hover.png) left 0px no-repeat; cursor: default; }
+	
+

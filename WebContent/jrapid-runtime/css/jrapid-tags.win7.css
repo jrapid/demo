@@ -1,0 +1,140 @@
+	@import url(master/master.css);
+
+/* ----------------------------------------------------------------------------- */
+/* Window */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */        
+	div.jrapid_Window__faded { -moz-opacity: 0.30; filter: alpha(opacity=30); }
+	div.jrapid_Window__tdfaded { -moz-opacity: 0.70; filter: alpha(opacity=70); }
+	div.jrapid_Window__dashed { border: 1px dashed #000000 }
+	
+	/*  inner - caption */
+	td.jrapid_window__caption { margin-left: 6px; padding: 2px 0px 0px 2px; left:0px; }          
+	td.jrapid_window__inner { border:none; background:transparent url("win7/Windows/inner.png") left top repeat; }    
+		
+	/* titlle - right - left - bottom - top */
+	td.jrapid_window__title {  background:url("win7/Windows/top-shadow.png") repeat scroll 0 bottom transparent; color: #000000; height:25px; padding: 10px 5px 5px 0px;}
+	td.jrapid_window__topright { background:url("win7/Windows/top-right-shadow.png") repeat scroll 0 bottom transparent; height: 40px; padding: 0px 0px 0px 0px; width: 17px; }
+	td.jrapid_window__topleft { background: url("win7/Windows/top-left-shadow.png") repeat scroll 0 bottom transparent; height: 40px; padding: 0px 0px 0px 0px; width: 18px; }
+	td.jrapid_window__left { background: url("win7/Windows/left-shadow.png") left top repeat-y !important; width: 18px; }
+	td.jrapid_window__right { background: url("win7/Windows/right-shadow.png") right top repeat-y !important; width: 17px; }
+	td.jrapid_window__bottomr { background-image: url("win7/Windows/bottom-right-shadow.png"); height: 16px; width: 17px; }
+	td.jrapid_window__bottoml { background-image: url("win7/Windows/bottom-left-shadow.png"); height: 16px; width: 18px; }
+	td.jrapid_window__bottom { background: url("win7/Windows/bottom-shadow.png") left bottom repeat; height: 16px; }
+	
+	/* buttons */	
+	td.jrapid_window__title div.jrapid_window__images { width:130px !important; }
+	a.jrapid_window__closebutton { width: 43px; height: 18px; background-image: url("win7/Windows/close.png"); margin-left: 0px; margin-right: 0px; margin-top: 3px; }    
+	a.jrapid_window__closebutton:hover { background-image: url("win7/Windows/close-hover.png"); }           
+	a.jrapid_window__maxbutton { width: 25px; height: 18px; background-image: url("win7/Windows/maximize.png"); margin-left: 0px; margin-right: 0px; margin-top: 3px; }    
+	a.jrapid_window__maxbutton:hover { background-image: url("win7/Windows/maximize-on.png"); }    
+	a.jrapid_window__minbutton { width: 25px; height: 18px; background-image: url("win7/Windows/minimize.png"); margin-left: 0px; margin-right: 0px; margin-top: 3px; }  
+	a.jrapid_window__minbutton:hover { background-image: url("win7/Windows/minimize-hover.png"); }
+	a.jrapid_window__helpbutton { width: 18px; height: 18px; background-image: url("win7/Windows/help_button.png"); margin:2px 6px 0 0; }
+	a.jrapid_window__helpbutton:hover { background-image: url("win7/Windows/help_button_hover.png"); width: 18px; height: 18px; }
+	a.jrapid_window__restorebutton { width: 25px; height: 18px; background-image: url("win7/Windows/restore_button.png"); margin-left: 0px; margin-right: 0px; margin-top: 3px; }
+	a.jrapid_window__restorebutton:hover { background-image: url("win7/Windows/restore_button_hover.png"); }  
+	            
+/* ----------------------------------------------------------------------------- */
+/* Menu  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+    div.menucontainer { background-color:transparent; background-image: none; }
+	ul.menubar { background-image: none; background-color:transparent; border:0px; height:auto; }
+    ul.menubar li a,
+    ul.menubar li a:visited { background-image: none; background-color: #0e5d7a !important; color:#fff; border:none; }
+	ul.menubar li:hover a,    
+    ul.menubar li a:hover { background: url(win7/layout-transparent-blue-light.png) 0px 0px repeat; color:#043142; }
+	ul.menubar li li a, 
+	ul.menubar li li a:visited,
+	ul.menubar li:hover ul li a,
+	ul.menubar li a:hover ul li a  { background:transparent url(win7/layout-transparent-white.png) 0px 0px repeat !important; color:#043142; margin:0px;}
+	ul.menubar li:hover ul li:hover a,
+	ul.menubar li a:hover ul li a:hover { background-image: none; background-color: #fff !important; color:#043142; }	
+    ul.menu { background-color:transparent !important; border:none; /*1px solid #c5d2d8*/ }	
+	 
+/* ----------------------------------------------------------------------------- */
+/* toolbar  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+    ul.toolbar { background: url('win7/Windows/top.png') left top repeat-x; border:0px solid black; }
+    ul.toolbar li a { background: #d8eafb; margin:2px 1px 0px 1px; padding: 2px 6px; height:23px; display:block; }
+    ul.toolbar li a:hover {  background: #f0f8ff; margin-top: 1px; }
+	
+/* ----------------------------------------------------------------------------- */
+/* Tab  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+	div.jrapid_tab { border:1px solid #919b9c; }
+	ul.jrapid_tabpane li a {  color:#666; background: url(win7/TabPane/item-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li a b { background: url(win7/TabPane/item-right.gif) right top no-repeat; }
+	ul.jrapid_tabpane li a:hover { color:black; background: url(win7/TabPane/selected-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li a:hover b { background: url(win7/TabPane/selected-right.gif) right top no-repeat; }
+	ul.jrapid_tabpane li.active a,
+	ul.jrapid_tabpane li.active a:hover,
+	ul.jrapid_tabpane li.active a:active { color:black; background: url(win7/TabPane/selected-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li.active a b,
+	ul.jrapid_tabpane li.active a:hover b,
+	ul.jrapid_tabpane li.active a:active b { background: url(win7/TabPane/selected-right.gif) right top no-repeat; }
+
+/* ----------------------------------------------------------------------------- */
+/* Table */ 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */        
+	table.jrapid_table thead th { background: url("win7/layout-table-th.png") left top repeat-x; border-right:1px solid #cee0eb; }          
+	table.jrapid_table thead th:hover { background-color: #316ac5; }      
+	tr.jrapid_table_tr__selected { background-color: #316ac5; }        
+
+/* ----------------------------------------------------------------------------- */
+/* bi */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	table.bi_ct td { border: 1px solid #cfe2f1; }
+	table.bi_ct thead th { background: #bccfe9 url(win7/bi/views.png) left top repeat-x; border-left: 1px solid #bbcfe8; color: #0f0e4f; }
+	table.bi_ct tbody th { background: #e7eef4 url(win7/bi/tbody-th.jpg) left top repeat-x; }
+	table.bi_ct thead th a.bi_ctorder { color: #0f0e4f; }
+	/* ----------------------------------------------------------------------------- */
+	/* BI - windows - table  */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
+	.bi_tablehead { background: #bccfe9 url(win7/bi/views.png) left top repeat-x; border-left: 1px solid #bbcfe8; color: #546f96; }
+	.bi_tableheadrows { background-color: #fff; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-bottom: 1px solid #aca899; border-right: 1px solid #aca899; }
+	.bi_table { border: 1px solid #CFE2F1; color: #363636; border-left: 0px solid #aca899;  }
+	/* ----------------------------------------------------------------------------- */
+	/* BI - headerContent  */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	#container div.headerContent { background: #c2e2ed /* #a2bce1 url(win7/bi/thead-th-2.jpg) left bottom repeat-x */; border: 1px solid #c9d8ed; color: #546f96; }
+	#container div.headerContent span.bi_title { color: #546f96; }
+	#container div.headerContent ul.headerNavegation li a { color: #0f0e4f;  }
+	#container div.headerContent ul.headerNavegation li a:hover { background: #0e5d7a; color: #fff; }
+	#container div.headerContent ul.headerNavegation li.activo a,
+	#container div.headerContent ul.headerNavegation li.activo a:link,
+	#container div.headerContent ul.headerNavegation li.activo a:hover,
+	#container div.headerContent ul.headerNavegation li.activo a:active { background: #0e5d7a; color: #fff; }
+	
+/* ----------------------------------------------------------------------------- */
+/* Tooltips */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */                              
+	.jrapid_tooltip div { background:#e8eff6; color: #00366f; border:1px solid #6a9ed5; } 
+
+/* ----------------------------------------------------------------------------- */
+/* Accordeon */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */        
+	div.jrapid_accordeon { background: transparent none; }
+	div.jrapid_accordeonitem { border:none; }     
+	button.jrapid_accordeonitem_button { background-image: none; background-color: #0e5d7a !important; color:#fff; border:none; text-transform:uppercase; }
+	div.jrapid_accordeonitem_body { background:transparent url(win7/layout-transparent-white.png) 0px 0px repeat !important; overflow: hidden; border-top:none; }
+	
+/* ----------------------------------------------------------------------------- */
+/* body */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
+	body { height:100%; background: #002a4d url(win7/layout-body.jpg) center top no-repeat; }
+
+/* ----------------------------------------------------------------------------- */
+/* wrap */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div#wrap { background: transparent none; }		
+	
+/* ----------------------------------------------------------------------------- */
+/* header */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.header { background:transparent url(win7/layout-header.png) left top repeat-x; }
+	div.header_inner h1, div.header_inner h2 { color:#fff; }
+ 
+/* ----------------------------------------------------------------------------- */
+/* footer */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.footer { background:#02213f url(win7/layout-footer.png) left top repeat-x; border:none; }

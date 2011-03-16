@@ -1,0 +1,3 @@
+#This file contains information about controllers that must be loaded by DefaultController.
+#For more information, see http://wiki.jrapid.com/w/Configuration_files
+com.jrapid.demohr.controller.MainController

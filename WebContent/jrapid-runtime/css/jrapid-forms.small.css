@@ -1,0 +1,35 @@
+
+/* INPUT - SELECT - TEXTAREA */
+input, select, textarea {
+	font-size: 10px;
+	padding-left: 2px;
+    background: url("form/form-modern2-bk.png") left top repeat-x;
+    border:1px solid #ccc;
+	font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    font-family: Georgia, serif;
+    }
+
+/* LABEL - SPAN - SUB_LABEL */
+label, span {
+    font-size:10px;
+    font-family: Georgia, serif;
+    }
+td table td table td table td table td label {
+    font-size:9px;
+    }
+
+/* LEGEND */
+legend {
+    font-size:9px;
+    }
+
+/* SELECT */
+select.jrapid_select  {
+    height:auto;
+    margin:0;
+    }
+
+/* TD PADDING-BOTTOM */
+td.label, td.labellist, td.labelset, td.labelsortedset, td.jrapid_value {
+    padding-bottom:4px;
+    }

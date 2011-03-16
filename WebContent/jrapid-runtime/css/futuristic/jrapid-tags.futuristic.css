@@ -1,0 +1,906 @@
+/* Master */
+
+/* ----------------------------------------------------------------------------- */
+/* Window */
+/* ----------------------------------------------------------------------------- */
+
+            .jrapid_window {
+                position: absolute;
+            }
+
+ 			.jrapid_window__table {
+                width: 100%;
+                height: 100%;
+				opacity: 0.93;
+ 				filter: alpha(opacity=93);
+                border-collapse: collapse;
+                border-spacing: 0px;		
+                font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+                padding:15px;
+				background-image: url("futuristic/Windows/windows-header.jpg");
+				background-position: left top;				
+				background-repeat: repeat-x;	 			
+                background-color:#000 !important;
+ 			}
+
+			.jrapid_window__title {
+				cursor: default;
+				font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+				color: #ffffff;
+				font-weight: bold;
+				height: 30px;
+				padding: 0px;
+				background-image: url("futuristic/Windows/top.gif");	
+				vertical-align: top;
+			}	
+
+            .jrapid_window__caption {
+				float: left;
+				position: relative;
+				margin-left: 2px;
+				margin-right: 4px;				
+				margin-top: 5px;				
+				padding: 2px 0px 0px 0px; 
+				overflow: hidden;
+				height: 14px;
+            }
+
+			.jrapid_window__icon {
+                padding: 0px; 
+                height: 16px;
+                margin-left: -8px;
+                margin-right: 2px;                
+                margin-top: 5px;                
+                vertical-align: middle;
+                float: left;
+                position: absolute;
+                left: 13px;
+				width:16px;
+            }
+
+            .jrapid_window__inner {
+                background:#060a0f;                
+				opacity: 0.93;
+ 				filter: alpha(opacity=93);
+				color:#aec7e2;
+				font-size: 11px;
+				margin:4px;
+				padding:4px;
+				/*border:1px solid #26476b;*/
+                vertical-align: top;
+            }
+            
+            .jrapid_window__right {
+				background-image: none !important;
+				background-color: #000 !important;
+				width: 4px;
+                cursor: e-resize;
+            }
+            
+            .jrapid_window__bottom {
+				background-image: url("futuristic/Windows/bottom.gif");
+				background-position: top;				
+				background-repeat: repeat-x;				
+				height: 4px;
+				padding: 0px 0px 0px 0px;
+				font-size: 4px;	
+				cursor: s-resize;
+            }
+            
+            .jrapid_window__bottoml {
+				background-image: url("futuristic/Windows/bottom.gif");
+				background-position: top right;				
+				background-repeat: no-repeat;				
+				height: 4px;
+				padding: 0px;
+				font-size: 4px;	
+            }
+
+            .jrapid_window__bottomr {
+				background-image: url("futuristic/Windows/bottom.gif");
+				background-position: top left;				
+				background-repeat: no-repeat;				
+				height: 4px;
+				padding: 0px 0px 0px 0px;
+				font-size: 4px;	
+				cursor: se-resize;
+            }
+
+            .jrapid_window__left {
+				background-image: none !important;
+				background-color: #000 !important;				
+				width: 4px;			 
+            }
+            
+            .jrapid_window__topright {
+				background-image: url("futuristic/Windows/topright.gif");
+				background-position: top left;				
+				background-repeat: repeat-y;				
+				width: 4px;
+				font-size: 0px;				
+				padding: 0px 2px 0px 2px;
+				cursor: e-resize;		               
+            }
+
+            .jrapid_window__topleft {
+				background-image: url("futuristic/Windows/topleft.gif");	
+				background-position: top right;
+				background-repeat: repeat-y;				
+				width: 4px;
+				font-size: 0px;
+				padding: 0px 2px 0px 2px;	              
+            }
+            
+            a.jrapid_window__closebutton {
+				width: 12px;
+				height: 13px;
+                float: right;
+				background-image: url("futuristic/Windows/close_button.gif");	
+				background-repeat: no-repeat;				
+				background-position: 0px 0px;
+				vertical-align: middle;
+				margin-left: 1px;
+				margin-right: 4px;				
+				margin-top: 5px;
+				cursor: default;								
+				position: relative;
+            }
+            
+            a.jrapid_window__closebutton:hover {
+				background-image: url("futuristic/Windows/close_button.gif");	
+				background-position: 0px -13px;
+            }
+                
+            a.jrapid_window__maxbutton {
+				width: 12px;
+				height: 13px;
+                float: right;
+				background-image: url("futuristic/Windows/maximize_button.gif");			
+				vertical-align: middle;
+				margin-left: 1px;
+				margin-right: 4px;			
+				margin-top: 5px;
+				cursor: default;								
+				position: relative;
+            }
+            
+            a.jrapid_window__maxbutton:hover {
+				background-image: url("futuristic/Windows/maximize_button.gif");		   
+				background-position: 0px -13px;
+            }
+            
+            a.jrapid_window__minbutton {
+				width: 12px;
+				height: 13px;
+                float: right;
+				background-image: url("futuristic/Windows/minimize_button.gif");	
+				vertical-align: middle;
+				margin-left: 1px;
+				margin-right: 4px;			
+				margin-top: 5px;								
+				cursor: default;				
+				position: relative;
+            }
+            
+            a.jrapid_window__minbutton:hover {
+				background-image: url("futuristic/Windows/minimize_button.gif");
+				background-position: 0px -13px;
+            }
+            
+            a.jrapid_window__helpbutton {
+				width: 12px;
+				height: 13px;
+                float: right;
+				background-image: url("futuristic/Windows/help_button.gif");				
+				vertical-align: middle;
+				margin-left: 1px;
+				margin-right: 4px;
+				margin-top: 5px;				
+				cursor: default;				
+				position: relative;
+            }
+            
+            a.jrapid_window__helpbutton:hover {
+				background-image: url("futuristic/Windows/help_button.gif");	    
+				background-position: 0px -13px;
+            }
+
+            a.jrapid_window__restorebutton {
+				width: 12px;
+				height: 13px;
+                float: right;   	 
+				background-image: url("futuristic/Windows/restore_button.png");				
+				vertical-align: middle;
+				margin-left: 1px;
+				margin-right: 4px;	
+				margin-top: 5px;
+				cursor: default;											
+				position: relative;
+            }
+
+            a.jrapid_window__restorebutton:hover {
+				background-image: url("futuristic/Windows/restore_button.png");	  
+            }				
+	
+            .jrapid_window__dashed {
+                border: 1px dashed #000000;
+                position: absolute;
+                z-index: 2;
+            }
+            
+            .jrapid_window__faded {
+                background-color:white;
+                -moz-opacity : 0.50;
+                filter : alpha(opacity=50);
+                position: absolute;
+                z-index: -1;
+                background-color: #CCCCCC;
+            } 
+
+			.jrapid_window__tdfaded {
+                -moz-opacity : 0.70;
+                filter : alpha(opacity=70);
+            }
+        
+            .jrapid_XmlRpcServer {
+                display: none;
+            }
+
+            .jrapid_window__images {
+                position: relative;
+                width:100%;
+                float:right;
+            }
+
+
+/* ----------------------------------------------------------------------------- */
+/* Menu  */
+/* ----------------------------------------------------------------------------- */
+        
+            .jrapid_menu__center {      
+                font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; 
+                border: 1px solid #aca899; 
+                background-color: #fff; 
+                color: #000000;
+                padding: 2px;
+            }
+            
+            .jrapid_menu__table {
+                width: 0%;
+                font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+                border: 1px solid #8A898E;
+                background-color: #fff;
+                color: #000000;
+                padding: 2px;
+                width: 0%;
+                border-collapse: collapse;
+                border-spacing: 0px;				 
+            }
+
+            .jrapid_menu__shadow {
+                position: absolute;
+                z-index:-1;
+                top: 3px;
+                left: 3px;  
+            }
+            
+            .jrapid_menu__shadowbottom {  
+                font-size: 1px;
+                height: 4px;
+                position: absolute;
+                bottom: -1px;
+                right: 2px;
+                width: 95%;					 
+            }
+
+            .jrapid_menu {
+                position: absolute;
+                top: 0px;
+                padding: 0px;	  
+            }            
+        
+        	/** changed */
+            .jrapid_menubar {
+				cursor: default;            
+				position: relative;
+				height: 20px;                
+				padding: 4px 0px;
+				font-size: 1px;
+				background-color: #ece9d8;
+				border: 1px solid #fff; 
+				border-bottom: 1px solid #aca899; 
+				border-right: 1px solid #aca899;
+            }
+        
+            .jrapid_menubaritem {
+                padding: 3px 8px; 
+                font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; 
+                cursor: default;
+                float: left;
+                position: relative;
+            }
+            
+            .jrapid_menubaritem__hover {
+                padding: 3px 8px; 
+                font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+                cursor: default;
+                background-color: #316ac5; 
+                color: #fff;
+                float: left;
+                position: relative;
+            }
+            
+            .jrapid_menubaritem__inner {
+                position: absolute;
+                top: 0px;                
+                left: 0px;
+                padding: 0px; 
+            }
+        
+            .jrapid_menuitem__icon {
+                height: 16px;
+				width:16px;
+                display: block;
+                overflow: hidden;
+                margin-left: 2px;
+                vertical-align: middle;
+                text-align: left;                
+            }
+            
+            .jrapid_menuitem__check {
+                width: 9px;
+                height: 7px;
+                display: block;
+                overflow: hidden;
+                background: url('futuristic/MenuItem/check.gif') top right no-repeat;
+                font-size: 1px;                
+                vertical-align: middle;                
+                text-align: left;                
+            }
+            
+            .jrapid_menuitem__arrow {
+                width: 6px;
+                height: 7px;
+                display: block;
+                overflow: hidden;
+                background: url('futuristic/MenuItem/arrow.gif') left top no-repeat;
+                font-size: 1px;
+                vertical-align: middle;
+                text-align: left;
+            }
+            
+            .jrapid_menuitem__caption {
+                vertical-align: middle;
+                text-align: left;
+                padding: 3px 9px 3px 7px;
+            }
+            
+            .jrapid_menuitem__disabled {
+                color: #aca899;
+            }
+
+            .jrapid_menuitem__shortcut {
+                vertical-align: middle;
+                text-align: left;
+                padding: 3px 9px 3px 7px;
+            }
+            
+            .jrapid_menuitem__faded {
+                -moz-opacity : 0.40;
+                filter : alpha(opacity=40);
+            }
+            
+            .jrapid_menuitem_highlight {
+                background-color: #316ac5;
+                color: #fff;
+            }
+        
+            .jrapid_menuSeparator__hr {
+                height: 1px;
+                width: 100%;
+            }
+
+
+/* ----------------------------------------------------------------------------- */
+/* Tab  */
+/* ----------------------------------------------------------------------------- */
+
+	.jrapid_tab { color:#aec7e2; background:#0b1118; border:1px solid #26476b; padding:5px; clear:both; font:11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;}
+	.jrapid_tabpane { float:left; text-align:left; height: 20px; margin: 0 0 -1px 0; padding:0px;}
+	.jrapid_tabpane li { float:left; display:block; margin:0px; padding:0px; }
+
+	.jrapid_tabpane li a { outline:none !important; background: url(futuristic/TabPane/item-right.gif) right top no-repeat; color:#aec7e2; font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; float:left; text-decoration:none; display:block;  margin: -1px 0px 0px 0px; width: auto; height: 20px; font-size:11px;  text-align: center; }
+	.jrapid_tabpane li a b { outline:none !important; background: url(futuristic/TabPane/item-left.gif) left top no-repeat; margin:0 2px 0 0; color:#aec7e2; float:left; display:block; padding:3px 12px 1px 12px; height: 20px; cursor:pointer; font-weight:normal;  }
+
+	.jrapid_tabpane li a:hover { outline:none !important; color:#aec7e2; background: url(futuristic/TabPane/selected-right.gif) right top no-repeat; cursor:pointer; color:black; margin-top:0px;  text-decoration:none; }
+	.jrapid_tabpane li a:hover b { outline:none !important; padding:3px 12px 1px 12px; margin-right:2px; background: url(futuristic/TabPane/selected-left.gif) left top no-repeat; cursor:pointer; }
+	
+	.jrapid_tabpane li.active a,
+	.jrapid_tabpane li.active a:hover,
+	.jrapid_tabpane li.active a:active { outline:none !important; cursor:pointer; color:#aec7e2; margin-top:0px; background: url(futuristic/TabPane/selected-right.gif) right top no-repeat; text-decoration:none; }
+	.jrapid_tabpane li.active a b,
+	.jrapid_tabpane li.active a:hover b,
+	.jrapid_tabpane li.active a:active b { outline:none !important; margin-right:2px; color:#aec7e2; background: url(futuristic/TabPane/selected-left.gif) left top no-repeat; font-weight:normal; cursor:pointer; }
+
+	.jrapid_xmlmultiple { display: none; }
+	.jrapid_xml { display: none; }
+
+
+/* ----------------------------------------------------------------------------- */
+/* Tooltips */
+/* ----------------------------------------------------------------------------- */        
+                      
+	/*.jrapid_tooltip { display: none; position: absolute; top:0px; left:0px; }          
+	.jrapid_tooltip iframe { width: auto; position: absolute; z-index: -1; border-width: 0px; border-collapse: collapse }    
+*/
+	.jrapid_tooltip  { background:#ececec; color: #666; border:1px solid #ccc; padding: 4px; white-space:nowrap; width: auto; position: absolute; z-index: 1; font:11px tahoma, verdana, sans-seif; } 
+
+
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* ----------------------------------------------------------------------------- */        
+
+	.jrapid_table { width: 100%;  *border-collapse: collapse; border-spacing: 0px; font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; overflow: auto; overflow-y: scroll; overflow-x: hidden; cursor: default; }
+	.jrapid_tbody { width: 100%; font-size: 11px; background-color: transparent; overflow-x:hidden;  }
+	.jrapid_table_caption { display:none; }                   
+	.jrapid_table thead th { color:#aec7e2;; background: #0d1825; white-space:nowrap; vertical-align:top; font-weight:normal; padding: 0px; height: 20px; overflow:hidden; font-size: 11px; text-align:left; padding: 1px 0px 1px 5px; }      
+	.jrapid_table thead th:hover { color:#aec7e2; background: #1c2934; }
+	.jrapid_table td { border-right: 1px solid #111f2e; border-bottom: 1px solid #111f2e; padding: 1px 0px 1px 5px; height: 17px; }          
+
+	.listing_table { height: 250px; width: 100%; }
+
+	table.jrapid_table { width: 100%; }
+
+	.bi_tablehead {
+		background-color: #ece9d8;
+		border-top: 1px solid #aca899; 
+		border-left: 1px solid #ffffff; 
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+	}
+	.bi_tableheadrows {
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+	}
+	.bi_table {
+		font-family:  "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; 
+		font-size: 11px; 
+		width: 100%;
+		border-left: 1px solid #aca899; 
+		padding: 2px 2px 2px 2px; 
+	}
+	.bi_tr {
+		background-color: #ffffff;
+	}
+	.bi_trselected {
+		background-color: #ece9d8;	
+	}
+	.bi_trselectedlink {
+		background-color: #F6F1E0;		
+		cursor: hand;
+	}
+	
+	.bi_td {
+		white-space:nowrap;
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;	
+	}
+	.bi_tdrows {
+		border-top: 1px solid #aca899; 
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;	
+	}
+	.bi_group {
+		background-color: #EEEEEE;
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+		padding-top: 8px;
+	}
+	.bi_number {
+		text-align: right;
+	}
+
+	.bi_separator {
+		background-color: white; 
+		border-right: 1px solid #aca899;
+		width: 40px; 
+	}
+	h2.bi_title {
+		color: #032367;
+		font-family:  "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; 
+		font-size: 13px; 
+	}
+
+	h3.bi_title {
+		color: #0043CF;	
+		font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; 
+		font-size: 11px; 
+	}
+	a.bi_a {
+		text-decoration: none;
+		color: #333333;
+	}
+	
+	a.bi_a:hover {
+		text-decoration: underline;
+		color: #111111;
+	}			
+	
+
+/* ----------------------------------------------------------------------------- */
+/* CROSSTAB */
+/* ----------------------------------------------------------------------------- */ 
+
+	.bi_ct {
+		font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+		font-size: 11px;
+		padding: 2px 2px 2px 2px; 
+		}
+	td.bi_cthead {
+		text-align: center;	
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+		}
+	td.bi_ctheadleft {
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		border-bottom: 1px solid #aca899;		
+		text-align: center;
+		}
+	td.bi_ctheadright {
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		border-bottom: 1px solid #aca899;		
+		text-align: center;	
+		}
+	td.bi_ctright {
+		background-color:  #ece9d8;
+		border-right: 1px solid #aca899;
+		}
+	td.bi_cttitlefirst {
+		border-top: 1px solid #ffffff; 	
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		background-color:  #efefef;
+		}
+	td.bi_cttitlecols {
+		border-top: 1px solid #ffffff; 	
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		border-bottom: 1px solid #aca899;
+		background-color:  #efefef;
+		text-align: center;
+		}
+	
+	td.bi_cttitleempty {
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		background-color:  #efefef;	
+		}
+	td.bi_cttitle {
+		text-align: center;	
+		border-left: 1px solid #ffffff; 	
+		border-right: 1px solid #aca899;
+		border-bottom: 1px solid #aca899;						
+		background-color:  #efefef;	
+		}
+	td.bi_ctrow {
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		}
+	td.bi_ctemptyrow {
+		background-color: #ece9d8;
+		border-right: 1px solid #aca899;
+		
+	}	
+	td.bi_ct {
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;	
+		}
+	a.bi_ct {
+		text-decoration: none;
+		color: #333333;
+		}
+	
+	a.bi_ct:hover {
+		text-decoration: underline;
+		color: #111111;
+		}
+				
+	div.bi_ctrotateup {
+		float:left;	
+		cursor:hand;
+		background-image: url('icon/rotateup.gif'); 
+		width: 16px;
+		height: 16px;		
+		}
+		
+	div.bi_ctrotatedown {
+		float:left;	
+		cursor:hand;
+		background-image: url('icon/rotatedown.gif'); 
+		width: 16px;
+		height: 16px;		
+		}
+		
+	div.bi_ctexclude {
+		float:left;	
+		cursor:hand;
+		background-image: url('icon/exclude.gif'); 
+		background-color: red;
+		width: 16px;
+		height: 16px;		
+		}
+		
+	div.bi_ctswap {
+		float:left;	
+		cursor:hand;
+		background-image: url('icon/swap.gif'); 
+		width: 16px;
+		height: 16px;		
+		}
+		
+	div.bi_ctswapvert {
+		float:left;
+		cursor:hand;
+		background-image: url('icon/swapvert.gif'); 
+		width: 16px;
+		height: 16px;		
+		}
+		
+	div.bi_ctmenu {
+		float:left;
+		cursor:hand;
+		background-image: url('icon/menu.gif'); 
+		width: 16px;
+		height: 16px;		
+		}
+		
+	div.bi_ctmenudiv {
+		background-color: #ffffff;
+		border: 1px solid #aca899;
+		padding: 2px 2px 2px 2px;		
+		}
+		
+	a.bi_ctmenuoption {
+		padding: 4px 10px 4px 10px;
+		border-bottom: 1px dashed #aca899;
+		}
+		
+	a.bi_ctorder {
+		text-decoration: underline;
+		color: #111111;
+		}
+		
+	div.bi_controlbar {
+		font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; 
+		font-size: 11px; 
+		padding: 5px 5px 5px 5px; 
+	 	background-color: #888888; 
+	 	color: #ffffff;
+		}
+		
+	a.bi_controlbaritem {
+		color: #ffffff;
+		}	
+	
+	div.bi_included {
+		font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+		font-size: 10px;
+		padding-bottom: 20px;
+		}
+	
+	div.bi_footer {
+		font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+		font-size: 10px;
+		padding-top: 10px;
+		}
+		
+	div.bi_tabletitle {
+		font-family: verdana;
+		font-size: 12px;
+		font-weight: bold;
+		text-align: center;
+		}
+	
+	div.bi_itemtitle {
+		font-family: verdana;
+		font-size: 12px;
+		font-weight: bold;
+		text-align: left;
+		background-color: #eeeeee;
+		padding: 5px 5px 5px 5px;
+		margin: 20px 0px 20px 0px;
+		}
+	
+	div.bi_tableheader {
+		font-family: verdana;
+		font-size: 11px;
+		font-weight: bold;
+		}
+	
+	div.bi_tablebody {
+		font-family: verdana;
+		font-size: 11px;
+		}
+
+	
+/* ----------------------------------------------------------------------------- */
+/* Accordeon */
+/* ----------------------------------------------------------------------------- */
+
+	.jrapid_accordeon  {
+		background-color: #fff;
+		}
+     
+	.jrapid_accordeonitem {
+		font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    	background:#000;
+    	border-bottom: 1px solid #111f2e !important;
+		border-color: #111f2e !important;    	
+    	}
+         
+	.jrapid_accordeonitem_button {
+		display: block; 
+		width: 100%;
+		border:none;
+		font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+		margin-bottom:2px;
+		/*
+		border: 1px solid #fff;
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+		*/
+		border:none !important;
+		border-bottom: 1px solid #111f2e !important;
+		padding-top:1px;
+		padding-bottom:2px;
+		background:#060a0f !important;
+		border-color: #111f2e !important;
+		color:#aec7e2  !important;
+		}
+
+	.jrapid_accordeonitem_body {
+    	overflow: hidden;
+	    padding: 0px 0px 0px 0px;
+		}
+
+
+
+/* ----------------------------------------------------------------------------- */
+/* generic */
+/* ----------------------------------------------------------------------------- */
+
+	legend { color:#aec7e2 !important; font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; }
+	label { font-size: 11px; }
+	input.number { width: 50px;	text-align: right; }
+	fieldset { padding: 5px 5px 5px 5px; }
+
+	button,	input.submit {padding: 6px 3px; margin-right:2px;}
+	
+	button,
+	input.submit,
+	select,
+	textarea,
+	input { 
+		color:#3f76b2; font: 11px "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important; 
+		background-color:transparent !important;
+		border: 1px solid #3f76b2 /*#192e46*/;
+		}
+	button:hover,
+	input.submit:hover { color:white; border: 1px solid #aec7e2; background-color:#000000;}
+	div.listing_actionsbar { text-align: right; }
+	
+	button.pages_button {padding: 1px 2px; margin-right:4px;}
+	select#pageselect { margin-right:4px;}
+	option { background: #0B1118; }
+	option:hover { background: red; }
+	
+
+
+/* ----------------------------------------------------------------------------- */
+/* console */
+/* ----------------------------------------------------------------------------- */
+
+	.jrapid_console {
+		z-index: 100;
+		position: absolute;
+		right: 10px;
+		top: 0px;
+	}
+
+	#jrapid_console .green {
+		/*border:1px solid #39ca2f;*/
+		border:1px solid #71cc6c;
+		/*background: #6cf662 url(futuristic/load-16x16.gif) 2px 2px no-repeat;*/
+		background: #96f78e url(futuristic/load-16x16.gif) 2px 2px no-repeat;
+	}
+
+	#jrapid_console .yellow {
+		border:1px solid #ecde6b;
+		background: #fcfcb1 url(futuristic/warn-16x16.png) 4px 2px no-repeat;
+	}
+
+	#jrapid_console .red {
+		/*border:1px solid #ff7b7b;*/
+		border:1px solid #fba1a2;
+		/*background: #ffadad url(futuristic/error-16x16.png)3px 2px no-repeat;*/
+		background: #ffbfbf url(futuristic/error-16x16.png)3px 2px no-repeat;
+	}
+
+	.jrapid_console_message  {
+		padding: 4px 5px 3px 25px;
+		background-image: url("futuristic/load-16x16.gif");
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		opacity: .92;
+		-moz-opacity: .92;
+		filter:alpha(opacity=92);
+		font: .7em verdana, arial, sans-serif;
+	}
+
+.listing_table {
+	overflow-y:scroll;
+	height: 250px;
+	width: 100%;
+}
+
+table.jrapid_table {
+	width: 100%;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* generic - main.css */
+/* ----------------------------------------------------------------------------- */
+
+label.filter {
+	color:#aec7e2 !important;
+	}
+
+#filterfieldset {
+	border:1px solid #26476B;
+	margin-right:15px;
+	}
+
+body {
+	scrollbar-3dlight-color:#000;
+	scrollbar-arrow-color:#000;
+	scrollbar-base-color:#000;
+	scrollbar-darkshadow-color:#000;
+	scrollbar-face-color:#0D1825;
+	scrollbar-highlight-color:#000;
+	scrollbar-shadow-color:#000
+	} 
+
+hr, #hr {
+	border:none;
+	border-color:#111F2E;
+	color: #111F2E;
+	background-color: #111F2E;
+	height: 2px;
+	}
+
+.bi_title {
+	color:#AEC7E2 !important;
+	font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+	}
+
+
+#form label {
+	color:#aec7e2 !important;
+	}
+
+
+	

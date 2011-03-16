@@ -1,0 +1,29 @@
+/* INPUT - SELECT - TEXTAREA */
+input, select, textarea {
+	font-size: 20px;
+	padding-left: 2px;
+    }
+
+/* LABEL - SPAN - SUB_LABEL */
+label, span {
+    font-size:20px;
+    }
+td table td table td table td table td label {
+    font-size:14px;
+    }
+
+/* LEGEND */
+legend {
+    font-size:14px;
+    }
+
+/* SELECT */
+select.jrapid_select  {
+    height:auto;
+    margin:0;
+    }
+
+/* TD PADDING-BOTTOM */
+td.label, td.labellist, td.labelset, td.labelsortedset, td.jrapid_value {
+    padding-bottom:12px;
+    }

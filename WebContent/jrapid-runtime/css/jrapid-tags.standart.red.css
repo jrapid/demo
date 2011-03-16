@@ -1,0 +1,119 @@
+	@import url(master/master.css);
+	@import url(jrapid-tags.standart.css);
+		
+/* ----------------------------------------------------------------------------- */
+/* Window */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 	
+	/* title - caption */
+	td.jrapid_window__title { color:#fff; background-image: url("standart-red/Windows/top-shadow.png"); }
+       
+	
+	/* inner - right - left - bottom - top */
+	td.jrapid_window__inner { border:1px solid #8A898E; background:#fff; }    
+	td.jrapid_window__right { background-image: url("standart-red/Windows/right-shadow.png"); background-position: left top; width: 16px; }
+	td.jrapid_window__bottom { background-image: url("standart-red/Windows/bottom-shadow.png"); }
+	td.jrapid_window__bottoml { background-image: url("standart-red/Windows/bottom-left-shadow.png"); font-size: 16px; }
+	td.jrapid_window__bottomr { background-image: url("standart-red/Windows/bottom-right-shadow.png"); }
+	td.jrapid_window__left { background: url("standart-red/Windows/left-shadow.png") right top repeat-y; width: 16px; }
+	td.jrapid_window__topright { background-image: url("standart-red/Windows/top-right-shadow.png"); width: 16px; padding: 0px 7px 0px 8px; }
+	td.jrapid_window__topleft { background-image: url("standart-red/Windows/top-left-shadow.png"); width: 15px; padding: 0px 7px 0px 8px; }
+
+	/* buttons */		
+	/* a:link img */
+	a.jrapid_window__closebutton { background-image: url("standart-red/Windows/close_button.gif") !important; }    
+	a.jrapid_window__maxbutton { background-image: url("standart-red/Windows/maximize_button.gif") !important; }    
+	a.jrapid_window__minbutton { background-image: url("standart-red/Windows/minimize_button.gif") !important; }  
+	a.jrapid_window__helpbutton { background-image: url("standart-red/Windows/help_button.gif") !important; }
+	a.jrapid_window__restorebutton { background-image: url("standart-red/Windows/restore_button.gif") !important; }	
+	/* hover */
+    a.jrapid_window__closebutton:hover,
+    a.jrapid_window__maxbutton:hover,
+    a.jrapid_window__minbutton:hover,
+	a.jrapid_window__helpbutton { background: url("standart-red/Windows/help_button.gif") 0px 0px no-repeat; }
+	a.jrapid_window__helpbutton:hover { background: url("standart-red/Windows/help_button.gif") 0px -13px no-repeat !important; }
+		
+/* ---------------------------------------------------------------------------- */
+/* Menu  */	
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+	div.menucontainer { background: url("standart-red/layout-menubar.png") 0px 0px repeat-x; }
+    ul.menubar li a,
+    ul.menubar li a:visited { background:#b1091f url("standart-red/layout-menubar.png") 0px 0px repeat-x; }
+	ul.menubar li:hover a,
+	ul.menubar li a:hover { background-image: none; background-color: #640612; }
+	ul.menubar li li a,
+	ul.menubar li:hover ul li a,
+	ul.menubar li a:hover ul li a { color: #801010; }
+	ul.menubar li:hover ul li:hover a,
+	ul.menubar li a:hover ul li a:hover,
+	ul.menubar li li a:hover { background-color: #640612; }
+	ul.menu { background: transparent url("standart-red/layout-transparent-red-light.png") left top repeat;  border:1px solid #ba3737; }
+
+/* ----------------------------------------------------------------------------- */
+/* Table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */                     
+	table.jrapid_table thead th { background: url(standart-red/header-bg.gif) left top repeat-x; border:1px solid #cee0eb; }
+	table.jrapid_table thead th:hover { background-color: #640612; }
+	table.jrapid_table td { border-bottom: 1px solid #cee0eb; border-right: 1px solid #cee0eb; }        
+	td.jrapid_td_selectd { background-color: #e1cece !important; }
+
+/* ----------------------------------------------------------------------------- */
+/* bi */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	table.bi_ct td { border: 1px solid #e6dada; }
+	table.bi_ct thead th { background: #e7c2bc url(standart-red/bi/views.png) left top repeat-x; border-left: 1px solid #e7bbbb; color: #0f0e4f; }
+	table.bi_ct tbody th { background: #f6e5e5 url(standart-red/bi/tbody-th.jpg) left top repeat-x; }
+	table.bi_ct thead th a.bi_ctorder { color: #ae3c3c; }
+	/* ----------------------------------------------------------------------------- */
+	/* BI - windows - table  */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
+	.bi_tablehead { background: #e6bfba url(standart-red/bi/views.png) left top repeat-x; border-left: 1px solid #edc9c9; color: #640612; }
+	.bi_tableheadrows { background-color: #fff; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-bottom: 1px solid #aca899; border-right: 1px solid #aca899; }
+	.bi_table { border: 1px solid #CFE2F1; color: #363636; border-left: 0px;  }
+	/* ----------------------------------------------------------------------------- */
+	/* BI - headerContent  */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	#container div.headerContent { background: #dfa3a3 url(standart-red/bi/thead-th-2.jpg) left top repeat-x; border: 1px solid #edc9c9; color: #640612; }
+	#container div.headerContent span.bi_title { color: #640612; }
+	#container div.headerContent ul.headerNavegation li a { color: #0f0e4f;  }
+	#container div.headerContent ul.headerNavegation li a:hover { background: #640612; color: #fff; }
+	#container div.headerContent ul.headerNavegation li.activo a,
+	#container div.headerContent ul.headerNavegation li.activo a:link,
+	#container div.headerContent ul.headerNavegation li.activo a:hover,
+	#container div.headerContent ul.headerNavegation li.activo a:active { background: #640612; color: #fff; }	
+	
+/* ----------------------------------------------------------------------------- */
+/* Tab  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.jrapid_tab { border:1px solid #919b9c; }
+	ul.jrapid_tabpane li a { background: url(standart/TabPane/item-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li a b { background: url(standart/TabPane/item-right.gif) right top no-repeat; }
+	ul.jrapid_tabpane li a:hover { background: url(standart/TabPane/selected-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li a:hover b { background: url(standart/TabPane/selected-right.gif) right top no-repeat; }
+	ul.jrapid_tabpane li.active a,
+	ul.jrapid_tabpane li.active a:hover,
+	ul.jrapid_tabpane li.active a:active { background:  url(standart/TabPane/selected-left.gif) left top no-repeat; }
+	ul.jrapid_tabpane li.active a b,
+	ul.jrapid_tabpane li.active a:hover b,
+	ul.jrapid_tabpane li.active a:active b { background: url(standart/TabPane/selected-right.gif) right top no-repeat; }
+
+/* ----------------------------------------------------------------------------- */
+/* Accordeon */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */       
+	button.jrapid_accordeonitem_button { background:#ba001d url("standart-red/layout-jrapid_accordeonitem_button.png") repeat-x; }
+	div.jrapid_accordeonitem_body { background:url(standart-red/Accordeon/layout-accordeon.png) repeat-x scroll left top #f4f4f4; }	
+
+/* ----------------------------------------------------------------------------- */
+/* body */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
+	body { background: #fff url("standart-red/layout-body.png") left top repeat-x; }
+	
+/* ----------------------------------------------------------------------------- */
+/* header */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.header { background: url("standart-red/layout-header.png") left top repeat-x; }
+	
+/* ----------------------------------------------------------------------------- */
+/* footer */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	div.footer { background:#640612; border-top:1px dashed #01378f; }	
+	

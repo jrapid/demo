@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app basepackage="com.jrapid.demohr" engine="forms-0.9" name="Main">
+    <!-- This file is the input for JRapid Code Generator and it's written using JML (JRapid Modeling Language). -->
+    <!-- Basically, there are <entity> elements which contain <property> elements, and allow you to design your application. -->
+    <!-- Additionally, there are many more elements such as <subset>, <listing>, <filter> or <action> that let you create powerful applications. -->
+    <!-- For a JML (JRapid Modeling Language) reference, please visit http://www.jrapid.com/documentation.html -->
+    <config>
+        <usescript location="../jrapid-runtime/jquery-1.4.2.min.js"/>
+        <usescript location="../jrapid-runtime/jquery-ui-1.8rc2.custom.min.js"/>
+        <usestylesheet location="../jrapid-runtime/css/ui-lightness/jquery-ui-1.8rc2.custom.css"/>
+        <usestylesheet location="../Main/css/Main.css"/>
+        <usewidget jquery="datepicker" jqueryoptions="{changeMonth: true, changeYear: true, dateFormat: 'dd/mm/yy'}" name="jdatepicker">
+            <usescript location="../jrapid-runtime/extras/widget-jdatepicker/js/jquery.ui.datepicker.min.js"/>
+        </usewidget>
+    </config>
+    <panel name="Index" title="Human Resources Manager">
+        <menu/>
+        <header><![CDATA[<h1>Welcome to Human Resources Manager</h1><h2>This application manages a HR area, storing employees (formerly candidates), courses taken and vacation requests.</h2>]]></header>
+        <column width="100%">
+            <accordeon>
+                <accordeonitem title="Employees">
+                    <listing entity="Employee" listing="employeesLeft" name="employees" panelheight="75%" title="Employees"/>
+                </accordeonitem>
+            </accordeon>
+        </column>
+        <footer><![CDATA[<h4>This application is entirely built with JRapid</h4>Visit us at <a href="http://www.jrapid.com">www.jrapid.com</a>]]></footer>
+    </panel>
+
+    <entity crosstab="crosstab" defaultlisting="employeesAlbum" label="Employee" menu="Employees Album" name="Employee" order="lastName,firstName">
+        <subset name="employees">
+            <condition field="status" value="'E'"/>
+        </subset>
+        <listing displayfilters="lastName,ssnFilter,gender,country" displayproperties="firstName,lastName;email;thumb" name="employeesAlbum" view="thumbnails">
+            <tab label="employees" name="employees" subset="employees"/>
+            <tab label="prospects" name="prospects" subset="prospects"/>
+        </listing>
+        <listing displayfilters="lastName,ssnFilter,gender,countriesFilter" layout="left" name="employeesLeft">
+            <tab label="All" name="all"/>
+            <tab label="Employees" name="employee" subset="employee"/>
+            <tab label="Former" name="former" subset="former"/>
+            <tab label="Candidate" name="candidate" subset="candidate"/>
+        </listing>
+        <subset name="former">
+            <condition field="status" value="'F'"/>
+        </subset>
+        <subset name="employee">
+            <condition field="status" value="'E'"/>
+        </subset>
+        <subset name="candidate">
+            <condition field="status" value="'C'"/>
+        </subset>
+        <subset name="prospects">
+            <condition field="status" value="'P'"/>
+        </subset>
+        <tab label="General" name="generalTab">
+            <column>
+                <property label="Picture" name="picture" type="image"/>
+                <property display="secondary" hidden="hidden" imagecopyof="picture" name="thumb" type="image" width="120"/>
+                <property display="primary" label="First Name" name="firstName" required="required"/>
+                <property display="primary" label="Last Name" name="lastName" required="required"/>
+                <property display="secondary" label="File Number" name="fileNumber"/>
+                <property dimension="column" display="secondary" enumset="EmployeeStatus" label="Status" name="status" type="enum"/>
+            </column>
+            <column>
+                <property label="SSN" name="ssn"/>
+                <property label="Date Of Birth" name="dateOfBirth" type="date" widget="selectdate"/>
+                <property enumset="Gender" label="Gender" name="gender" type="enum" />
+                <property display="primary" label="E-mail" name="email" type="email"/>
+                <property label="Phone" name="phone"/>
+                <property label="Mobile" name="mobile"/>
+                <property enumset="MaritalStatus" label="Marital Status" name="maritalStatus" type="enum"/>
+            </column>
+        </tab>
+        <tab label="Family" name="familyTab">
+            <property displayif="maritalStatus = 'M'" label="Spouse" name="spouse" dimension="column" />
+            <property collection="set" label="Children" name="children"/>
+        </tab>
+        <tab label="Address" name="address">
+            <property label="Address" name="address" type="text"/>
+            <property   dimension="row" entity="Country" label="Country" name="country"/>
+            <property entity="State" label="State" name="state" subset="forCountry" subsetparams="country"/>
+            <property autosuggest="autosuggest" label="City" name="city"/>
+        </tab>
+        <tab label="Skills" name="skillsTab">
+            <column>
+                <property label="CV" name="cv" type="file"/>
+                <property collection="set" label="Skills" name="skills"/>
+            </column>
+            <column>
+                <property collection="set" entity="Qualification" label="Qualifications" name="qualifications"/>
+            </column>
+        </tab>
+        <tab label="Courses" name="coursesTab">
+            <property childproperty="employee" collection="set" embedded="inline" entity="CourseTaken" extendable="extendable" label="Courses Taken" name="coursesTaken"/>
+        </tab>
+        <tab label="Interviews" name="interviewsTab">
+            <embeddedlisting defaultset="forEmployeeDef" defaultsetparams="." entity="Interview" label="Interviews" listing="forInterviewsTab" name="interviews" subset="forEmployee" subsetparams="."/>
+        </tab>
+        <tab label="Vacations" name="vacationsTab">
+            <embeddedlisting defaultset="forEmployeeDef" defaultsetparams="." entity="VacationRequest" label="Vacations" name="vacations" subset="forEmployee" subsetparams="."/>
+        </tab>
+        <filter display="primary" label="Last Name" name="lastName" property="lastName"/>
+        <filter display="primary" label="SSN" name="ssnFilter" property="ssn"/>
+        <filter label="Country" name="country" property="country"/>
+        <filter display="primary" entity="Qualification" label="Qualifications" name="qualificationsFilter">
+            <condition contains="qualificationsFilter" field="qualifications"/>
+        </filter>
+        <filter display="primary" label="Gender" name="gender" property="gender"/>
+        <filter collection="set" entity="Country" label="Countries" name="countriesFilter" widget="checkbox">
+            <condition field="country" in="countriesFilter"/>
+        </filter>
+    </entity>
+
+    <entity label="Country" menu="Configuration" name="Country" order="name">
+        <property display="primary" label="Country" name="name"/>
+        <property childproperty="country" collection="set" embedded="inline" entity="State" extendable="extendable" name="states"/>
+    </entity>
+
+    <entity label="State" menu="Configuration" name="State" order="name">
+        <subset name="forCountry" order="name">
+            <param entity="Country" name="countryParam"/>
+            <condition field="country" value="countryParam"/>
+        </subset>
+        <property display="primary" label="State" name="name"/>
+        <property entity="Country" label="Country" name="country"/>
+    </entity>
+
+    <entity label="Qualification" menu="Learning" name="Qualification">
+        <property display="primary" label="Name" name="name"/>
+    </entity>
+
+    <entity label="Interview" menu="Interviews" name="Interview">
+        <defaultset name="forEmployeeDef">
+            <param entity="Employee" name="employeeParam"/>
+            <default name="employee" value="employeeParam"/>
+            <default name="interviewDate" value="now"/>
+        </defaultset>
+        <listing name="forInterviewsTab" subset="forEmployee"/>
+        <subset name="forEmployee" order="start">
+            <param entity="Employee" name="employeeParam"/>
+            <condition field="employee" value="employeeParam"/>
+        </subset>
+        <property comboproperty="lastName" display="primary" entity="Employee" label="Employee" name="employee" widget="combo"/>
+        <property display="primary" label="Title" name="title"/>
+        <property default="now" display="secondary" label="Date" name="interviewDate" type="date" widget="jdatepicker"/>
+        <property display="secondary" label="Start" name="start" type="time" widget="selecttime"/>
+        <property display="secondary" label="End" name="end" type="time" widget="selecttime"/>
+        <property label="All Day" name="allDay" type="boolean"/>
+    </entity>
+
+    <entity label="Course" menu="Learning" name="Course">
+        <property display="primary" label="Name" name="name"/>
+        <property label="Description" name="description" type="text"/>
+        <property hint="Duration of course in hours" label="Duration" name="duration" tooltip="Duration in hours" type="integer"/>
+    </entity>
+
+    <entity label="Course Taken" name="CourseTaken">
+        <property entity="Course" label="Course" name="course"/>
+        <property entity="Employee" hidden="hidden" label="Employee" name="employee"/>
+        <property label="Completed" name="completed" type="boolean"/>
+    </entity>
+
+    <entity label="Vacation Request" menu="Vacations" name="VacationRequest">
+        <defaultset name="forEmployeeDef">
+            <param entity="Employee" name="employeeParam"/>
+            <default name="emplyee" value="employeeParam"/>
+        </defaultset>
+        <subset name="forEmployee" order="fromDate">
+            <param entity="Employee" name="employeeParam"/>
+            <condition field="emplyee" value="employeeParam"/>
+        </subset>
+        <property comboproperty="lastName" display="primary" entity="Employee" label="Emplyee" name="emplyee" widget="combo"/>
+        <property label="From Date" name="fromDate" type="date" widget="jdatepicker"/>
+        <property label="To Date" name="toDate" type="date" widget="jdatepicker"/>
+        <property label="Granted" name="granted" type="boolean"/>
+    </entity>
+
+    <enumset name="MaritalStatus">
+        <enum value="S">Single</enum>
+        <enum value="M">Married</enum>
+        <enum value="D">Divorced</enum>
+        <enum value="W">Widowed</enum>
+    </enumset>
+    <enumset name="Gender">
+        <enum value="M">Male</enum>
+        <enum value="F">Female</enum>
+    </enumset>
+    <enumset name="EmployeeStatus">
+        <enum value="C">Candidate</enum>
+        <enum value="E">Employee</enum>
+        <enum value="F">Former Employee</enum>
+    </enumset>
+</app>

@@ -1,0 +1,291 @@
+/** TABLE **/
+	.bi_tablehead {
+		background-color: #ece9d8;
+		border-top: 1px solid #aca899; 
+		border-left: 1px solid #ffffff; 
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+	}
+	.bi_tableheadrows {
+		/*width: 20%;*/
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+	}
+	.bi_table {
+		font-family: Tahoma; 
+		font-size: 11px; 
+		width: 100%;
+		border-left: 1px solid #aca899; 
+		padding: 2px 2px 2px 2px; 
+	}
+	.bi_tr {
+		background-color: #ffffff;
+	}
+	.bi_trselected {
+		background-color: #ece9d8;	
+	}
+	.bi_trselectedlink {
+		background-color: #F6F1E0;		
+		cursor: hand;
+	}
+	
+	.bi_td {
+		white-space:nowrap;
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;	
+	}
+	.bi_tdrows {
+		border-top: 1px solid #aca899; 
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;	
+	}
+	.bi_group {
+		background-color: #EEEEEE;
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+		padding-top: 8px;
+	}
+	.bi_number {
+		text-align: right;
+	}
+
+	.bi_separator {
+		background-color: white; 
+		border-right: 1px solid #aca899;
+		width: 40px; 
+	}
+	.bi_title {
+		color: #032367;
+		font-family: Tahoma; 
+	}
+	span.bi_title {
+		font-size: 12px;
+		font-weight: bold;
+		padding-right: 5px;
+	}
+	small.bi_title {
+		font-size: 11px;
+	}
+	select.bi_title {
+		font-size: 11px;
+	}
+	a.bi_title {
+		text-decoration: none;
+		color: black;
+	}
+	h2.bi_title {
+		color: #032367;
+		font-family: Tahoma; 
+		font-size: 13px; 
+	}
+
+	h3.bi_title {
+		color: #0043CF;	
+		font-family: Tahoma; 
+		font-size: 11px; 
+	}
+	a.bi_a {
+		text-decoration: none;
+		color: #333333;
+	}
+	
+	a.bi_a:hover {
+		text-decoration: underline;
+		color: #111111;
+	}			
+	
+/** CROSSTAB **/
+	.bi_ct {
+		font-family: Tahoma;
+		font-size: 11px;
+		padding: 2px 2px 2px 2px; 
+	}
+	td.bi_cthead {
+		text-align: center;	
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;
+	}
+	td.bi_ctheadleft {
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		border-bottom: 1px solid #aca899;		
+		text-align: center;
+	}
+	td.bi_ctheadright {
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		border-bottom: 1px solid #aca899;		
+		text-align: center;	
+	}
+	td.bi_ctright {
+		background-color:  #ece9d8;
+		border-right: 1px solid #aca899;
+	}
+	td.bi_cttitlefirst {
+		border-top: 1px solid #ffffff; 	
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		background-color:  #efefef;
+	}
+	td.bi_cttitlecols {
+		border-top: 1px solid #ffffff; 	
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		border-bottom: 1px solid #aca899;
+		background-color:  #efefef;
+		text-align: center;
+	
+	}
+	
+	td.bi_cttitleempty {
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+		background-color:  #efefef;	
+	}
+	td.bi_cttitle {
+		text-align: center;	
+		border-left: 1px solid #ffffff; 	
+		border-right: 1px solid #aca899;
+		border-bottom: 1px solid #aca899;						
+		background-color:  #efefef;	
+	}
+	td.bi_ctrow {
+		background-color: #ece9d8;
+		border-top: 1px solid #ffffff; 
+		border-left: 1px solid #ffffff; 
+		border-right: 1px solid #aca899;
+	}
+	td.bi_ctemptyrow {
+		background-color: #ece9d8;
+		border-right: 1px solid #aca899;
+		
+	}	
+	td.bi_ct {
+		border-bottom: 1px solid #aca899; 
+		border-right: 1px solid #aca899;	
+	}
+	a.bi_ct {
+		text-decoration: none;
+		color: #333333;
+	}
+	
+	a.bi_ct:hover {
+		text-decoration: underline;
+		color: #111111;
+	}		
+	div.bi_ctrotateup {
+		float:left;	
+		cursor:hand;
+		background-image: url('icon/rotateup.gif'); 
+		width: 16px;
+		height: 16px;		
+	}
+	div.bi_ctrotatedown {
+		float:left;	
+		cursor:hand;
+		background-image: url('icon/rotatedown.gif'); 
+		width: 16px;
+		height: 16px;		
+	}
+	div.bi_ctexclude {
+		float:left;	
+		cursor:hand;
+		background-image: url('icon/exclude.gif'); 
+		background-color: red;
+		width: 16px;
+		height: 16px;		
+	}
+	div.bi_ctswap {
+		float:left;	
+		cursor:hand;
+		background-image: url('icon/swap.gif'); 
+		width: 16px;
+		height: 16px;		
+	}
+	div.bi_ctswapvert {
+		float:left;
+		cursor:hand;
+		background-image: url('icon/swapvert.gif'); 
+		width: 16px;
+		height: 16px;		
+	}
+	div.bi_ctmenu {
+		float:left;
+		cursor:hand;
+		background-image: url('icon/menu.gif'); 
+		width: 16px;
+		height: 16px;		
+	}
+	div.bi_ctmenudiv {
+		background-color: #ffffff;
+		border: 1px solid #aca899;
+		padding: 2px 2px 2px 2px;		
+	}
+	a.bi_ctmenuoption {
+		padding: 4px 10px 4px 10px;
+		border-bottom: 1px dashed #aca899;
+	}
+	a.bi_ctorder {
+		text-decoration: underline;
+		color: #111111;
+	}
+	div.bi_controlbar {
+		font-family: Tahoma; 
+		font-size: 11px; 
+		padding: 5px 5px 5px 5px; 
+	 	background-color: #888888; 
+	 	color: #ffffff;
+	}
+	a.bi_controlbaritem {
+		color: #ffffff;
+	}	
+	
+	div.bi_included {
+		font-family: tahoma;
+		font-size: 10px;
+		padding-bottom: 20px;
+	}
+	
+	div.bi_footer {
+		font-family: tahoma;
+		font-size: 10px;
+		padding-top: 10px;
+	}
+	div.bi_tabletitle {
+		font-family: verdana;
+		font-size: 12px;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	div.bi_itemtitle {
+		font-family: verdana;
+		font-size: 12px;
+		font-weight: bold;
+		text-align: left;
+		background-color: #eeeeee;
+		padding: 5px 5px 5px 5px;
+		margin: 20px 0px 20px 0px;
+	}
+	
+	div.bi_tableheader {
+		font-family: verdana;
+		font-size: 11px;
+		font-weight: bold;
+	}
+	
+	div.bi_tablebody {
+		font-family: verdana;
+		font-size: 11px;
+	}
+	
